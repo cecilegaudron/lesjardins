@@ -34,7 +34,67 @@
     <title>Les Jardins {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid fixed-top">
+      <div class="row">
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-enter text-lg-left">
+          <a href="{% url 'home' %}" class="nav-ling main-logo-link">
+            <h2>Les Jardins Shop</h2>
+          </a>
+        </div>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+          <!-- Search Form -->
+          <form method="GET" action="">
+            <div class="input-group w-100">
+              <input type="text" placeholder="Search" name="q">
+              <button type="submit" class="form-control btn btn-black border-black rounded-0">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Account menu-->
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+          <ul class="list-inline list-unstyled text-center">
+            <li class="list-inline-item dropdown">
+              <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                  <div><i class="fas fa-user fa-lg"></i></div>
+                  <p class="my-0">My account</p>
+                </div>
+              </a>
+              <!-- Account menu when connected -->
+              <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                  {% if request.user.is_superuser %}
+                    <a href="" class="dropdown-item">Product management</a>
+                  {% endif %}
+                  <a href="" class="dropdown-item">My profile</a>
+                  <a href="{% url 'accoun_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+              </div>
+            </li>
+            <!-- Shopping bag -->
+            <li class="list-inline-item">
+              <a class="{% if grand_total %} text-info font-weight-bold {% else %} text-black {% endif %} nav-link" href="">
+                <div class="text-center">
+                  <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                  <p class="my-0">
+                    {% if grand_total %}
+                      §{{ grand_total|floatformat:2 }}
+                    {% else %}
+                      $0.00
+                    {% endif %}
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
     {% if messages %}
     <div class=""message-container></div>
@@ -47,7 +107,10 @@
     {% endblock %}
 
     {% block postloadjs %}
+  
     {% endblock %}
-
+     <!-- font awesome script -->
+     <script src="https://kit.fontawesome.com/3ee526735d.js" crossorigin="anonymous"></script>
+     
   </body>
 </html>
