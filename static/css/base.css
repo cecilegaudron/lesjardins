@@ -1,0 +1,87 @@
+/* Import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@300&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    /* Photo de <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> sur <a href="https://unsplash.com/fr/photos/vyHo3nnk8G8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+    /* https://unsplash.com/fr/photos/vyHo3nnk8G8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink */
+    background: url('/media/hp-vegetables.webp') no-repeat center center fixed;
+    background-size: cover;
+    /* height calculation to the body element */
+    height: calc(100vh - 164px);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+/* from Bulma 
+center and keep font awesome style consistent*/
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    /* push the body down to the bottom of the main page header */
+    .header-container {
+        padding-top: 164px;
+    }
+}
