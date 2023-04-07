@@ -19,6 +19,13 @@ h1 {
     font-family: 'Fjalla One', sans-serif;
 }
 
+/* Text on products navigation bar */
+.products-menu {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
 /* from Bulma 
 center and keep font awesome style consistent*/
 .icon {
