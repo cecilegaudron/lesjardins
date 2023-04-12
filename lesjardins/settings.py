@@ -70,6 +70,7 @@ TEMPLATES = [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'templates', 'allauth'),
         ],
+        # Normalement setting a appliquer mais les lignes plus haut ont lair de primer
         # 'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
