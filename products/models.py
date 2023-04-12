@@ -62,12 +62,13 @@ class Product(models.Model):
     """
     For ratings
     https://medium.com/geekculture/django-implementing-star-rating-e1deff03bb1c
-    """
+    
     def average_rating(self) -> float:
-        return Rating.objects.filter(post=self).aggregate(Avg("rating"))["rating__avg"] or 0
+        return Rating.objects.filter(product=self).aggregate(Avg("rating"))["rating__avg"] or 0
 
     def __str__(self):
         return f"{self.name}: {self.average_rating()}"
+    """
 
 
 class Rating(models.Model):
