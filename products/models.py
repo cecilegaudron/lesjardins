@@ -20,6 +20,7 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
+
 class Product(models.Model):
     """
     Database model for product
@@ -30,6 +31,11 @@ class Product(models.Model):
         null=True,
         blank=True
     )
+    sku = models.CharField(
+        max_length=254,
+        null=True,
+        blank=True
+    )
     name = models.CharField(
         max_length=254,
     )
@@ -37,11 +43,11 @@ class Product(models.Model):
         max_length=800,
     )
     price_kilo = models.DecimalField(
-        max_digits=3, 
-        decimal_places=2,
+        max_digits=3,
+        decimal_places=2
     )
     weight = models.IntegerField(
-        help_text = "Weight in grams"
+        help_text="Weight in grams"
     )
     price = models.DecimalField(
         max_digits=3,
@@ -58,27 +64,3 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-    
-    """
-    For ratings
-    https://medium.com/geekculture/django-implementing-star-rating-e1deff03bb1c
-    
-    def average_rating(self) -> float:
-        return Rating.objects.filter(product=self).aggregate(Avg("rating"))["rating__avg"] or 0
-
-    def __str__(self):
-        return f"{self.name}: {self.average_rating()}"
-    """
-
-
-class Rating(models.Model):
-    """
-    Database for Ratings
-    https://medium.com/geekculture/django-implementing-star-rating-e1deff03bb1c
-    """
-    #user = models.ForeignKey(User, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    rating = models.IntegerField(default=0)
-
-    def __str__(self):
-        return f"{self.product.header}: {self.rating}"
