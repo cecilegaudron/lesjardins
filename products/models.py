@@ -43,14 +43,14 @@ class Product(models.Model):
         max_length=800,
     )
     price_kilo = models.DecimalField(
-        max_digits=3,
+        max_digits=6,
         decimal_places=2
     )
     weight = models.IntegerField(
         help_text="Weight in grams"
     )
     price = models.DecimalField(
-        max_digits=3,
+        max_digits=6,
         decimal_places=2
     )
     image_url = models.URLField(
