@@ -23,43 +23,50 @@ def all_products(request):
         If statement for sort display, price or category
         If a direction is added on main_nav file, apply it, asc or desc
         """
+
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
+
             if sortkey == 'name':
                 """
                 Rename sortkey to lower_name to not lost the original field
                 """
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-            """
-            Check the direction if it is descending, reverse the order with the minus in front of the sortkey
-            """
-            if 'direction' in request.GET :
+
+            if sortkey == 'category':
+                """
+                Force the categories to be displayed by name instead of the ID
+                """
+                sortkey = 'category__name'
+
+            if 'direction' in request.GET:
+                """
+                Check the direction if it is descending, reverse the order with the minus in front of the sortkey
+                """
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            """
-            Use the order by model method
-            """
+
             products = products.order_by(sortkey)
 
-        """
-        If statement for category search
-        Check if the category exists
-        Filter all categories to the ones choosen by its name
-        """
         if 'category' in request.GET:
+            """
+            If statement for category search
+            Check if the category exists
+            Filter all categories to the ones choosen by its name
+            """
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-        """
-        If statement for the search form
-        Check if the text input is equal to a variable called query
-        If the query is blank any results are returned but a message and redirect to the products page
-        """
         if 'q' in request.GET:
+            """
+            If statement for the search form
+            Check if the text input is equal to a variable called query
+            If the query is blank any results are returned but a message and redirect to the products page
+            """
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search critera")

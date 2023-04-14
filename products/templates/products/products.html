@@ -19,18 +19,39 @@
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Products</h2>
                 <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="product-container col-10 offset-1">
+                <!-- Order list by price, category, etc.-->
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-first">
+                        <!-- Display quantity of products on the category
+                        Display the name of the current category
+                        Display the entry name and the results for a research -->
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {{ products|length }} Products {% for c in current_categories %}"{{ c.friendly_name }}"{% endfor %}{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="product-container col-10 offset-1">
-
-                        <div class="row mt-1 mb-2"></div>
-                        <div class="row">
-                            <!-- For loop for products list -->
-                            {% for product in products %}
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="card h-100 border-0">
-                                    <!-- Card layout -->
-                                    {% if product.image %}
+                    <!-- For loop for products list -->
+                    {% for product in products %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card h-100 border-0">
+                                <!-- Card layout -->
+                                {% if product.image %}
                                     <!-- Top of card layout with product image
                                     With the URL for each detail product -->
                                     <a href="{% url 'product_detail' product.id %}">
@@ -40,50 +61,50 @@
                                     <a href="{% url 'product_detail' product.id %}">
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                     </a>
-                                    {% endif %}
-                                    <!-- Body of Card layout with product name -->
-                                    <div class="card-body pb-0">
-                                        <p class="mb-0">{{ product.name }}</p>
-                                    </div>
-                                    <!-- Footer of Card layout with price -->
-                                    <div class="card-footer bg-white pt-0 border-0 text-left">
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="lead mb-0 text-left font-weight-bold">{{ product.price }} €</p>
-                                                <small class="text-muted">{{ product.weight }} grams | {{ product.price_kilo }} €/kg</small>
-                                            </div>
+                                {% endif %}
+                                <!-- Body of Card layout with product name -->
+                                <div class="card-body pb-0">
+                                    <p class="mb-0">{{ product.name }}</p>
+                                </div>
+                                <!-- Footer of Card layout with price -->
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold">{{ product.price }} €</p>
+                                            <small class="text-muted">{{ product.weight }} grams | {{ product.price_kilo }} €/kg</small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- If For loop is divisible by 1, render this column, only visible on extra small screens -->
-                            {% if forloop.counter|divisibleby:1 %}
-                                <div class="col-12 d-sm-none mb-5">
-                                    <hr>
-                                </div>
-                            {% endif %}                       
-                            <!-- If For loop is divisible by 2, render this column, only visible on small and medium screens --> 
-                            {% if forloop.counter|divisibleby:2 %}
-                                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                    <hr>
-                                </div>
-                            {% endif %}
-                            <!-- If For loop is divisible by 3, render this column, hidde everything except large screens -->
-                            {% if forloop.counter|divisibleby:3 %}
-                                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                    <hr>
-                                </div>
-                            {% endif %}
-                            <!-- If For loop is divisible by 4, render this column, hidde everything except extra large screens -->
-                            {% if forloop.counter|divisibleby:4 %}
-                                <div class="col-12 d-none d-xl-block mb-5">
-                                    <hr>
-                                </div>
-                            {% endif %}
-                            {% endfor %}
                         </div>
-                    </div>
+                        <!-- If For loop is divisible by 1, render this column, only visible on extra small screens -->
+                        {% if forloop.counter|divisibleby:1 %}
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}                       
+                        <!-- If For loop is divisible by 2, render this column, only visible on small and medium screens --> 
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        <!-- If For loop is divisible by 3, render this column, hidde everything except large screens -->
+                        {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        <!-- If For loop is divisible by 4, render this column, hidde everything except extra large screens -->
+                        {% if forloop.counter|divisibleby:4 %}
+                            <div class="col-12 d-none d-xl-block mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
+        </div>
+    </div>
 
 {% endblock %}
