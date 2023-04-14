@@ -7,9 +7,9 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item products-menu">By Price</a>
-                <a href="" class="dropdown-item products-menu">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item products-menu">All Products</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item products-menu">By Price</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item products-menu">By Category</a>
+                <a href="{% url 'products' %}?direction=asc" class="dropdown-item products-menu">All Products</a>
             </div>
         </li>
         <!-- Menu with selections -->

@@ -15,8 +15,35 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
 
     if request.GET:
+        """
+        If statement for sort display, price or category
+        If a direction is added on main_nav file, apply it, asc or desc
+        """
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                """
+                Rename sortkey to lower_name to not lost the original field
+                """
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+            """
+            Check the direction if it is descending, reverse the order with the minus in front of the sortkey
+            """
+            if 'direction' in request.GET :
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            """
+            Use the order by model method
+            """
+            products = products.order_by(sortkey)
+
         """
         If statement for category search
         Check if the category exists
@@ -46,10 +73,16 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
+    """
+    Return the current sorting methodology to the template
+    """
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/products.html', context)
