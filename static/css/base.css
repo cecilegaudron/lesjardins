@@ -26,8 +26,13 @@ h1 {
     text-transform: uppercase;
 }
 
+/* Header */
+#delivery-banner h4 {
+    font-size: .9rem;
+}
+
 /* from Bulma 
-center and keep font awesome style consistent*/
+center and keep font awesome style consistent */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -49,6 +54,19 @@ center and keep font awesome style consistent*/
 .btn-black {
     background: black;
     color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    border: 1px solide black;
+}
+
+.btn-outline-black:hover,
+.btn.outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 .shop-now-button:hover,
