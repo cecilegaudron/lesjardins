@@ -8,7 +8,7 @@ html {
 body {
     /* Photo de <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> sur <a href="https://unsplash.com/fr/photos/vyHo3nnk8G8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
     /* https://unsplash.com/fr/photos/vyHo3nnk8G8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink */
-    background: url('https://res.cloudinary.com/dcymco5tc/image/upload/v1681313815/lesjardins/hp-vegetables_v7xyd1.webp') no-repeat center center fixed;
+    background: url('https://res.cloudinary.com/dcymco5tc/image/upload/v1681313815/media/hp-vegetables_v7xyd1.webp') no-repeat center center fixed;
     background-size: cover;
     /* height calculation to the body element */
     height: calc(100vh - 164px);
@@ -25,6 +25,7 @@ h1 {
     font-size: 1.3rem;
     text-transform: uppercase;
 }
+
 
 /* Header */
 #delivery-banner h4 {
