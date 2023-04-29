@@ -11,6 +11,7 @@ def bag_contents(request):
     bag_items = []
     total = 0
     product_count = 0
+    bag = request.session.get('bag', {})
     
     """Checker if the amount to pay is less than the total threshold
     If yes, the delivery is calculated as the total multiplied by the standard delivery percentage so 10%
