@@ -7,8 +7,8 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="OUTscape game is an escape game played outdoors in the streets of Berlin">
-    <meta name="keywords" content="outscape, escape game, game, outdoor, Berlin, Alexanderplatz, Berlin-Mitte, clues, riddles, investigation, players">
+    <meta name="description" content="TO BE COMPLETED">
+    <meta name="keywords" content="TO BE COMPLETED">
     <meta name="author" content="CÉcile Gaudron">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
@@ -17,9 +17,9 @@
     {% endblock %}
 
     {% block corecss %}
-      <!-- Bootstrap CSS -->
+      <!-- Bootstrap CSS + CSS style + Google font -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-      <!-- CSS style -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@300&display=swap">
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -120,7 +120,11 @@
     </header>
 
     {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+      {% for message in messages %}
+        {% include 'includes/toasts/toast_success.html' %}
+      {% endfor %}
+    </div>
     {% endif %}
 
     {% block page_header %}
@@ -130,6 +134,9 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+      $('.toast').toast('show');
+    </script>
     {% endblock %}
 
      <!-- font awesome script -->
