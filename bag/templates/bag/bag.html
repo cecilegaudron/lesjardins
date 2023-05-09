@@ -47,7 +47,7 @@
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">{{ item.product.price }}€</p>
+                                        <p class="my-0">{{ item.product.price }} €</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         <form class="form update-form" action="{% url 'adjust_bag' item.item_id %}" method="POST">
@@ -83,19 +83,19 @@
                                         <a class="remove-item float-right" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash-can fa-lg"></i></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">{{ item.product.price | calc_subtotal:item.quantity }}€</p>
+                                        <p class="my-0">{{ item.product.price | calc_subtotal:item.quantity }} €</p>
                                     </td>
                                 </tr>
                                 {% endfor %}
                                 <!-- Using the total the delivery chagers and the grand_total as well as the free delivery_delta -->
                                 <tr>
                                     <td colspan="5" class="pt-5 text-right">
-                                        <h6><strong>Bag Total: {{ total|floatformat:2 }}€</strong></h6>
-                                        <h6>Delivery: {{ delivery|floatformat:2 }}€</h6>
-                                        <h4 class="mt-4"><strong>Grand Total: {{ grand_total|floatformat:2 }}€</strong></h4>
+                                        <h6><strong>Bag Total: {{ total|floatformat:2 }} €</strong></h6>
+                                        <h6>Delivery: {{ delivery|floatformat:2 }} €</h6>
+                                        <h4 class="mt-4"><strong>Grand Total: {{ grand_total|floatformat:2 }} €</strong></h4>
                                         {% if free_delivery_delta > 0 %}
                                             <p class="mb-1 text-danger">
-                                                You could get free delivery by spending just <strong>{{ free_delivery_delta }}€</strong> more!
+                                                You could get free delivery by spending just <strong>{{ free_delivery_delta }} €</strong> more!
                                             </p>
                                         {% endif %}
                                     </td>
@@ -108,7 +108,7 @@
                                             </span>
                                             <span class="text-uppercase">Keep Shopping</span>
                                         </a>
-                                        <a href="" class="btn btn-black rounded-0 btn-lg">
+                                        <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
                                             <span class="text-uppercase">Secure Checkout</span>
                                             <span class="icon">
                                                 <i class="fas fa-lock"></i>
