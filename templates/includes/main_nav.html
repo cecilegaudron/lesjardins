@@ -1,15 +1,19 @@
 <!-- Document for products navigation bar -->
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <!-- Menu with categories -->
+        <!-- Menu with all offers -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5 products-menu" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
+            <a class="logo-font font-weight-bold nav-link text-black products-menu" href="#" id="offer-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Our offer
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item products-menu">By Price</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item products-menu">By Category</a>
-                <a href="{% url 'products' %}?direction=asc" class="dropdown-item products-menu">All Products</a>
+            <div class="dropdown-menu border-0" aria-labelledby="offers-link">
+                <a href="{% url 'products' %}?category=vegetables" class="dropdown-item products-menu">Vegetables</a>
+                <a href="{% url 'products' %}?category=fruits" class="dropdown-item products-menu">Fruits</a>
+                <a href="{% url 'products' %}?category=herbs" class="dropdown-item products-menu">Herbs</a>
+                <a href="{% url 'products' %}?category=grocery" class="dropdown-item products-menu">Grocery</a>
+                <a href="{% url 'products' %}?category=dry_vegetables" class="dropdown-item products-menu">Dry Vegetables</a>
+                <a href="{% url 'products' %}?category=plants_seeds" class="dropdown-item products-menu">Plants & Seeds</a>
+                <a href="{% url 'products' %}" class="dropdown-item products-menu">All Products</a>
             </div>
         </li>
         <!-- Menu with selections -->
@@ -31,21 +35,6 @@
                 <a href="" class="dropdown-item products-menu">Weekly Baskets</a>
                 <a href="" class="dropdown-item products-menu">Monthly Baskets</a>
                 <a href="" class="dropdown-item products-menu">All Baskets</a>
-            </div>
-        </li>
-        <!-- Menu with all offers -->
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black products-menu" href="#" id="offer-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Our offer
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="offers-link">
-                <a href="{% url 'products' %}?category=vegetables" class="dropdown-item products-menu">Vegetables</a>
-                <a href="{% url 'products' %}?category=fruits" class="dropdown-item products-menu">Fruits</a>
-                <a href="{% url 'products' %}?category=herbs" class="dropdown-item products-menu">Herbs</a>
-                <a href="{% url 'products' %}?category=grocery" class="dropdown-item products-menu">Grocery</a>
-                <a href="{% url 'products' %}?category=dry_vegetables" class="dropdown-item products-menu">Dry Vegetables</a>
-                <a href="{% url 'products' %}?category=plants_seeds" class="dropdown-item products-menu">Plants & Seeds</a>
-                <a href="{% url 'products' %}" class="dropdown-item products-menu">All Products</a>
             </div>
         </li>
     </ul>
