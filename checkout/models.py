@@ -26,7 +26,7 @@ class Order(models.Model):
     phone_number = models.CharField(
         max_length=20,
         null=False,
-        blank=False
+        blank=True
         )
     country = models.CharField(
         max_length=40,
@@ -36,7 +36,7 @@ class Order(models.Model):
     postcode = models.CharField(
         max_length=20,
         null=False,
-        blank=True
+        blank=False
         )
     city = models.CharField(
         max_length=40,
@@ -51,7 +51,7 @@ class Order(models.Model):
     street_address2 = models.CharField(
         max_length=80,
         null=False,
-        blank=False
+        blank=True
         )
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(

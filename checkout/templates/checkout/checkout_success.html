@@ -20,15 +20,78 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Thank you</h2>
+                <h2 class="logo-font mb-4">Thank you for your order</h2>
                 <hr>
                 <p class="text-black">A confirmation email will be sent to <strong>{{ order.email }}.</strong><br>
-                    Your order information is :</p>
+                    Click on the button to see the details of the order</p>
             </div>
         </div>
-        <!-- Empty column for render the order summary -->
+        <!-- Order summary -->
         <div class="row">
-            <div class="col-12 col-lg-7"></div>
+            <div class="col-12 col-lg-7">
+                <div class="order-confirmation-wrapper p-2 border">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="order-title">Order Info:</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-0 text-black font-weight-bold">Order Number: {{ order.order_number }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-0 text-black font-weight-bold">Order Date: {{ order.date }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="order-title">Order Details:</h3>
+                        </div>
+                    </div>
+                    {% for item in order.lineitems.all %}
+                    <div class="row">
+                        <div class="col">
+                            <p class="small mb-0 text-black font-weight-bold"><strong>{{ item.quantity }}</strong>X <strong>{{ item.product.name }}</strong> ({{ item.product.weight }} gr) = <strong>{{ item.product.price }} €</strong></p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="order-title">Delivering to:</h3>
+                            <p class="mb-0">{{ order.full_name }}<br>
+                                {{ order.street_address1 }}
+                                {% if order.street_address2 %}
+                                    {{ order.street_address2 }}
+                                {% endif %}<br>
+                                {{ order.postcode }} {{ order.city }}<br>
+                                {{ order.country }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="order-title">Billing Info:</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-0 text-black font-weight-bold">Order Total: {{ order.order_total }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-0 text-black font-weight-bold">Delivery Charges: {{ order.delivery_cost }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-0 text-black font-weight-bold">Grand Total: {{ order.grand_total }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
