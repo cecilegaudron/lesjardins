@@ -8,7 +8,7 @@ class Category(models.Model):
     # Tell Django to write the correct plurial name
     class Meta:
         verbose_name_plural = 'Categories'
-        
+
     name = models.CharField(
         max_length=254
     )
