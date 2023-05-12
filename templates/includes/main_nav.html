@@ -3,7 +3,7 @@
     <ul class="navbar-nav w-auto mx-auto">
         <!-- Menu with all offers -->
         <li class="nav-item">
-            <a class="font-weight-bold nav-link text-black products-menu" href="{% url 'products' %}?category=vegetables" id="offer-link" >
+            <a class="font-weight-bold nav-link text-black products-menu" href="{% url 'products' %}?category=vegetables,herbs" id="offer-link" >
                 Vegetables <i class="fa-solid fa-carrot"></i> 
             </a>
         </li>
@@ -13,7 +13,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="font-weight-bold nav-link text-black products-menu" href="#" id="offer-link">
+            <a class="font-weight-bold nav-link text-black products-menu" href="{% url 'products' %}?category=grocery,dry_vegetables,plants_seeds," id="offer-link">
                 Other products <i class="fa-solid fa-jar"></i> 
             </a>
         </li>
