@@ -88,32 +88,33 @@ def checkout(request):
             messages.error(request, "Your bag is currently empty")
             return redirect(revser('products'))
 
-    current_bag = bag_contents(request)
-    total = current_bag['grand_total']
-    stripe_total = round(total * 100)
-    stripe.api_key = stripe_secret_key
-    intent = stripe.PaymentIntent.create(
-        amount=stripe_total,
-        currency=settings.STRIPE_CURRENCY,
-    )
-
-    if request.user.is_authenticated:
-        try:
-            profile = UserProfile.objects.get(user=request.user)
-            order_form = OrderForm(initial={
-                'full_name': profile.user.get_full_name(),
-                'email': profile.user.email,
-                'phone_number': profile.default_phone_number,
-                'street_address1': profile.default_street_address1,
-                'street_address2': profile.default_street_address2,
-                'postcode': profile.default_postcode,
-                'city': profile.default_city,
-                'country': profile.default_country,
-            })
-        except UserProfile.DoesNotExist:
+        current_bag = bag_contents(request)
+        total = current_bag['grand_total']
+        stripe_total = round(total * 100)
+        stripe.api_key = stripe_secret_key
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
+    
+        # Attempt to prefill the form with user info
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'postcode': profile.default_postcode,
+                    'city': profile.default_city,
+                    'country': profile.default_country,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
             order_form = OrderForm()
-    else:
-        order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(
@@ -121,6 +122,7 @@ def checkout(request):
             'Stripe public key is missing. \
                 Did you forget to set it in your environment?'
             )
+
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
