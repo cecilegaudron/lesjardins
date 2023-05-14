@@ -3,12 +3,13 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
+from .forms import ProductForm
 
 
 def all_products(request):
     """
     Basic view for the all products page including sorting and search queries
-    A context is required since we need to send some thinds back to the template
+    A context is required to send some things back to the template
     Import the product model and all products from the database
     The products can be available in the template
     """
@@ -44,7 +45,8 @@ def all_products(request):
 
             if 'direction' in request.GET:
                 """
-                Check the direction if it is descending, reverse the order with the minus in front of the sortkey
+                Check the direction if it is descending, reverse the order \
+                with the minus in front of the sortkey
                 """
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -66,7 +68,8 @@ def all_products(request):
             """
             If statement for the search form
             Check if the text input is equal to a variable called query
-            If the query is blank any results are returned but a message and redirect to the products page
+            If the query is blank any results are returned but a message \
+                and redirect to the products page
             """
             query = request.GET['q']
             if not query:
@@ -78,7 +81,8 @@ def all_products(request):
             The pipe generates the or statement
             the i makes the queries case insensitive
             """
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) \
+                | Q(description__icontains=query)
             products = products.filter(queries)
 
     """
@@ -110,3 +114,13 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def add_product(request):
+    """Add product to the store"""
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+    return render(request, template, context)
