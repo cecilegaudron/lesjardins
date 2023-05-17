@@ -9,7 +9,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE
-        )    
+        )
     default_street_address1 = models.CharField(
         max_length=80,
         null=True,
