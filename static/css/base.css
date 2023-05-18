@@ -24,16 +24,46 @@ h3 {
     font-family: 'Fjalla One', sans-serif;
 }
 
-/* Text on products navigation bar */
+/* Navigation Bar*/
 .products-menu {
     font-family: 'Fjalla One', sans-serif;
     font-size: 1.8rem;
     text-transform: uppercase;
+    color: #000 !important;
 }
 
-/* Header */
+.icon-menu {
+    color: #B6C47F !important;
+}
+
+/* Header 
 #delivery-banner h4 {
     font-size: 1.4rem;
+}
+*/
+
+/* Header */
+.icon-header {
+    color: #65009C;
+    font-size: 1.4rem;
+}
+
+.fa-user {
+    font-size: 1.6rem !important;
+}
+
+.text-header {
+    color: #65009C;
+    font-size: 1.2rem;
+}
+
+.text-dropdown {
+    color: #65009C;
+    font-size: 1rem;
+}
+
+.logo {
+    width: 80%;
 }
 
 /* from Bulma 
@@ -101,7 +131,7 @@ center and keep font awesome style consistent */
     z-index: -1;
 }
 
-/* Button link back to top of the page */
+/* Button link back to top of the page NOT WORKING */
 .btt-button {
     height: 42px;
     width: 42px;
@@ -116,6 +146,7 @@ center and keep font awesome style consistent */
     cursor: pointer;
 }
 
+/* User messages */
 .message-container {
     position: fixed;
     top: 72px;
@@ -181,8 +212,6 @@ center and keep font awesome style consistent */
     overflow-x: hidden;
     overflow-y: auto;
 }
-
-/* Allauth form formatting */
 
 /* Product Form */
 .btn-file {
