@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="center-content">
+        <h1>Page not found</h1>
+        <br>
+        <p>HTTP ERROR 404 <br>
+            It's embarrassing, the page you are looking for cannot be found or does not exist.</p><br>
+            <button class="btn btn-dark btn-detail"><a href="{% url 'home' %}">Go back to Home page</a></button>
+    </div>
+
+
+{% endblock %}
