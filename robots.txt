@@ -1,0 +1,3 @@
+User-agent : *
+Disallow:
+Sitemap: https://les-jardins.herokuapp.com/sitemap.xml
