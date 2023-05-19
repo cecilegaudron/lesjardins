@@ -3,16 +3,16 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 h1 {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Fjalla One', Arial, sans-serif;
     font-size: 2.6rem;
 }
 
 h2 {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Fjalla One', Arial, sans-serif;
     font-size: 2rem;
 }
 
@@ -21,12 +21,12 @@ h3 {
 }
 
 .title {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Fjalla One', Arial, sans-serif;
 }
 
 /* Navigation Bar*/
 .products-menu {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Fjalla One', Arial, sans-serif;
     font-size: 1.8rem;
     text-transform: uppercase;
     color: #000 !important;
@@ -64,6 +64,25 @@ h3 {
 
 .logo {
     width: 80%;
+}
+/* Footer */
+footer {
+    background-color: #B6C47F;
+}
+
+.title-footer {
+    font-family: 'Fjalla One', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+footer a, :active {
+    color: #FFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFF;
+    text-decoration: underline;
 }
 
 /* from Bulma 
