@@ -33,9 +33,15 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+#DEBUG = "DEVELOPMENT" in os.environ
 
-ALLOWED_HOSTS = ['les-jardins.herokuapp.com', 'localhost']
+DEBUG = os.environ.get("DEBUG", False)
+
+ALLOWED_HOSTS = [
+    '8000-cecilegaudro-lesjardins-qz5xotnyoyp.ws-eu97.gitpod.io',
+    'localhost',
+    'les-jardins.herokuapp.com'
+    ]
 
 # Application definition
 
@@ -215,6 +221,7 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
+# Email sending
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'lesjardins@example.com'
