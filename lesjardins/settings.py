@@ -19,7 +19,6 @@ if os.path.isfile("env.py"):
     import env
 
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 # ADD-ON DEPLOYMENT Link file to the templates directory in Heroku
@@ -61,6 +60,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'contact',
 
     # Other
     'crispy_forms',

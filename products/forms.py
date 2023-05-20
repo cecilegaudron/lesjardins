@@ -1,4 +1,5 @@
 from django import forms
+from django.forms import CheckboxInput
 from .widgets import CustomClearableFileInput
 from .models import Product, Category
 
@@ -14,6 +15,11 @@ class ProductForm(forms.ModelForm):
         widget=CustomClearableFileInput
         )
 
+    #our_selection = forms.BooleanField(
+        #widget=CheckboxInput,
+        #required=False
+    #)
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
@@ -22,3 +28,5 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+
