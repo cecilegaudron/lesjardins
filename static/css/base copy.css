@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 html {
     height: 100%;
 }
@@ -27,6 +22,38 @@ h3 {
 
 .title {
     font-family: 'Fjalla One', Arial, sans-serif;
+}
+
+/* Navigation Bar*/
+.products-menu {
+    font-family: 'Fjalla One', Arial, sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #000 !important;
+}
+
+.icon-menu {
+    color: #B6C47F !important;
+}
+
+/* Header */
+.icon-header {
+    color: #65009C;
+    font-size: 1.4rem;
+}
+
+.fa-user {
+    font-size: 1.6rem !important;
+}
+
+.text-header {
+    color: #65009C;
+    font-size: 1.2rem;
+}
+
+.text-dropdown {
+    color: #65009C;
+    font-size: 1rem;
 }
 
 /* Footer */
@@ -72,6 +99,10 @@ center and keep font awesome style consistent */
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
 }
 
 .shop-now-button {
@@ -123,6 +154,15 @@ center and keep font awesome style consistent */
     position: fixed;
     background: white;
     z-index: -1;
+}
+
+/* Button link back to top of the page NOT WORKING */
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 }
 
 .btt-link,
@@ -232,5 +272,32 @@ center and keep font awesome style consistent */
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    /* push the body down to the bottom of the main page header */
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }

@@ -52,8 +52,8 @@
 </head>
 
 <body>
-  <header class="container-fluid fixed-top bg-white w-100">
-    <!--<div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">-->
+  <!--<header class="container-fluid fixed-top bg-white w-100">
+    <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
       <div id="logo" class="col-12 col-lg-3 my-auto py-1 py-lg-0">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
           <img class="img-fluid logo"
@@ -61,9 +61,10 @@
             alt="Les Jardins logo"></a>
         </a>
       </div>
+      </header> -->
         <!-- File with header -->
         {% include 'includes/header.html' %}
-  </header>
+
 
   {% if messages %}
   <div class="message-container">

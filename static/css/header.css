@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    height: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .links,
+.shopping {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.logo:hover {
+    scale: 1.05;
+}
+
+li {
+    list-style: none;
+}
+
+.products_menu {
+    font-family: 'Fjalla One', Arial, sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.products_menu:hover {
+    text-decoration: none;
+    color: #65009C;
+}
+
+.menu_icon,
+.shopping_icon {
+    color: #B6C47F !important;
+}
+
+.shopping_icon:hover,
+.menu_icon:hover {
+    color: #65009C;
+}
+
+.shopping_txt,
+.shopping_txt:active {
+    font-family: 'Fjalla One', Arial, sans-serif;
+    font-size: 1.7;
+    text-decoration: none;
+    color: #000;
+}
+
+.shopping_txt:hover {
+    color: #65009C;
+}
+
+/* Dropdown menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 5rem;
+    height: 0;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fffafa;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1546;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    margin: 1rem;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.dropdown_menu.open {
+    height: fit-content;
+    width: 70%;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+
+    .navbar .links,
+    .navbar .shopping {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+    .logo {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+
+    .logo {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dropdown_menu {
+        top: 4rem;
+    }
+
+    .logo {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .logo {
+        width: 40%;
+    }
+}
