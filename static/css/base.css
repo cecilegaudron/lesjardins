@@ -49,6 +49,11 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Home page */
+.hp-punchline {
+    background-color: #B6C47F;
+}
+
 /* Buttons */
 .btn-success {
     background-color: #B6C47F;
@@ -75,9 +80,9 @@ center and keep font awesome style consistent */
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
+    background: #000;
+    color: #B6C47F;
+    min-width: fit-content;
 }
 
 .btn-black {
@@ -108,8 +113,8 @@ center and keep font awesome style consistent */
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: #333333;
+    color: #FFF;
 }
 
 .text-black {
