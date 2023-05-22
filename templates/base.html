@@ -22,7 +22,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@300&display=swap">
-  <link rel="shortcut icon" href="https://res.cloudinary.com/dcymco5tc/image/upload/v1684431546/media/favicon_qus1bk.ico"/>
+  <link rel="shortcut icon"
+    href="https://res.cloudinary.com/dcymco5tc/image/upload/v1684431546/media/favicon_qus1bk.ico" />
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
 
@@ -52,18 +53,8 @@
 </head>
 
 <body>
-  <!--<header class="container-fluid fixed-top bg-white w-100">
-    <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-      <div id="logo" class="col-12 col-lg-3 my-auto py-1 py-lg-0">
-        <a href="{% url 'home' %}" class="nav-link main-logo-link">
-          <img class="img-fluid logo"
-            src="https://res.cloudinary.com/dcymco5tc/image/upload/v1684431240/media/logo-lesjardins_1_xb8rxp.webp"
-            alt="Les Jardins logo"></a>
-        </a>
-      </div>
-      </header> -->
-        <!-- File with header -->
-        {% include 'includes/header.html' %}
+  <!-- File with header -->
+  {% include 'includes/header.html' %}
 
 
   {% if messages %}
@@ -93,8 +84,8 @@
   {% block content %}
   {% endblock %}
 
- <!-- File with footer -->
- {% include 'includes/footer.html' %}
+  <!-- File with footer -->
+  {% include 'includes/footer.html' %}
 
   {% block postloadjs %}
   <script type="text/javascript">

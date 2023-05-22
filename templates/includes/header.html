@@ -5,10 +5,10 @@
 {% endblock %}
 
 <header>
-    <div class="navbar w-100">
-        <div class="logo">
+    <div class="navbar w-100 bg-white">
+        <div class="col-8 col-sm-6 col-md-4 col-lg-3">
             <a href="{% url 'home' %}">
-                <img class="img-fluid logo" alt="Les Jardins logo"
+                <img class="img-fluid logo plg-2" alt="Les Jardins logo"
                     src="https://res.cloudinary.com/dcymco5tc/image/upload/v1684431240/media/logo-lesjardins_1_xb8rxp.webp">
             </a>
         </div>
@@ -42,7 +42,7 @@
             </a>
         </div>
         <!-- Products menu -->
-        <div class="txt-center">
+        <div>
             <ul class="links">
                 <li>
                     <a href="{% url 'products' %}?category=vegetables,herbs" class="products_menu">Vegetables
@@ -50,10 +50,11 @@
                 </li>
                 <li>
                     <a href="{% url 'products' %}?category=fruits" class="products_menu">Fruits
-                        <i class="fa-solid fa-carrot menu_icon"></i></a>
+                        <i class="fa-solid fa-apple-whole menu_icon"></i></a>
                 </li>
                 <li>
-                    <a href="{% url 'products' %}?category=vegetables,herbs" class="products_menu">Other Products
+                    <a href="{% url 'products' %}?category=grocery,dry_vegetables,plants_seeds"
+                        class="products_menu">Other Products
                         <i class="fa-solid fa-jar menu_icon"></i></a>
                 </li>
             </ul>
@@ -71,13 +72,14 @@
         </li>
         <li>
             <a href="{% url 'products' %}?category=fruits" class="products_menu">Fruits
-                <i class="fa-solid fa-carrot menu_icon"></i></a>
+                <i class="fa-solid fa-apple-whole menu_icon"></i></a>
         </li>
         <li>
-            <a href="{% url 'products' %}?category=vegetables,herbs" class="products_menu">Other Products
+            <a href="{% url 'products' %}?grocery,dry_vegetables,plants_seeds" class="products_menu">Other Products
                 <i class="fa-solid fa-jar menu_icon"></i></a>
         </li>
-        <li>
+        <hr class="w-80">
+        <li class="shopping-content">
             <a class="{% if grand_total %}{% else %}text-black{% endif %} nav-link d-block d-lg-none shopping_txt"
                 href="{% url 'view_bag' %}">
                 <i class="fa-solid fa-basket-shopping shopping_icon"></i>
@@ -88,23 +90,36 @@
                 {% endif %}
             </a>
         </li>
-        <li>
-            <a class="nav-link d-block d-lg-none dropdown shopping_txt" href="#" id="user-options"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user fa-lg shopping_icon"></i>My Account
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Product Management</a>
-                {% endif %}
-                <a href="" class="dropdown-item">My Profile</a>
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                {% endif %}
+        <!-- Split dropright button -->
+        <li class="shopping-content">
+            <div class="btn-group dropright">
+                <a class="nav-link d-block d-lg-none dropright shopping_txt" href="#" id="user-options"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user fa-lg shopping_icon"></i> My Account
+                </a>
+                <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropright</span>
+                </button>
+                <div class="dropdown-menu">
+                    <!-- Dropdown menu links -->
+                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                    {% endif %}
+                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% endif %}
+                </div>
             </div>
+        </li>
+        <li class="shopping-content">
+            <a href="{% url 'contact' %}" class="shopping_txt">
+                Contact us
+            </a>
         </li>
     </div>
 </header>
