@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col text-center mt-3">
             <h2 class="logo-font">Products</h2>
-            <hr class="w-50 mb-1">
+            <hr class="w-80 mb-1">
         </div>
     </div>
     <div class="row">
@@ -63,7 +63,7 @@
                         <!-- Top of card layout with product image
                                     With the URL for each detail product -->
                         <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid product_img" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
@@ -73,7 +73,7 @@
                         {% endif %}
                         <!-- Body of Card layout with product name -->
                         <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.name }}</p>
+                            <p class="mb-0 product_name">{{ product.name }}</p>
                         </div>
                         <!-- Footer of Card layout with price -->
                         <div class="card-footer bg-white pt-0 border-0 text-left">
@@ -123,9 +123,9 @@
     </div>
 </div>
 <!-- Button to get back to the top of the page -->
-<div class="btt-button shadow-sm rounded-0 border border-black">
+<div class="btt-button">
     <a class="btt-link d-flex h-100">
-        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        <i class="fa-solid fa-circle-arrow-up" style="color: #b6c47f;"></i>
     </a>
 </div>
 

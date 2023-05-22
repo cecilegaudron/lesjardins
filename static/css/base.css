@@ -85,6 +85,10 @@ center and keep font awesome style consistent */
     color: white;
 }
 
+.btn-green {
+    background: #B6C47F
+}
+
 .btn-outline-black {
     background: white;
     color: black !important;
@@ -131,6 +135,20 @@ center and keep font awesome style consistent */
     cursor: pointer;
 }
 
+/* Products list and details */
+.product_img:hover {
+    scale: 1.02;
+}
+
+.product_img {
+    border-radius: 5%;
+}
+
+.product_name {
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
 /* User messages */
 .message-container {
     position: fixed;
@@ -147,7 +165,7 @@ center and keep font awesome style consistent */
     height: 2px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ 
 .arrow-up {
     width: 0;
     height: 0;
@@ -158,6 +176,7 @@ center and keep font awesome style consistent */
     top: -10px;
     right: 36px;
 }
+*/
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
@@ -196,6 +215,16 @@ center and keep font awesome style consistent */
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.edit-bag {
+    color: #65009C;
+    text-decoration: none;
+}
+
+.edit-bag:hover {
+    color: #000;
+    text-decoration: none;
 }
 
 /* Product Form */
