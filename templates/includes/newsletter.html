@@ -1,0 +1,14 @@
+<section>
+    <div class="container p-4 col-md-6 mx-auto">
+        <!-- Emil subscription Form -->
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Subscribe to our newsletter and receive our news!</label>
+                <input type="email" name="email" placeholder="Enter your email address">
+                <input type="text" name="username" placeholder="Add your name">
+                <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>

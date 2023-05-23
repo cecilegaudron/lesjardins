@@ -46,7 +46,7 @@ footer {
     font-size: 1.2rem;
 }
 
-footer a, :active {
+footer a {
     color: #FFF;
     text-decoration: none;
 }
