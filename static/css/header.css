@@ -19,8 +19,8 @@ header {
     z-index: 1548;
 }
 
-.navbar .links,
-.shopping {
+.navbar .links, 
+.navbar .shopping {
     display: flex;
     gap: 2rem;
 }
@@ -65,7 +65,7 @@ li {
 .shopping_txt,
 .shopping_txt:active {
     font-family: 'Fjalla One', Arial, sans-serif;
-    font-size: 1.7;
+    font-size: 1.7rem;
     text-decoration: none;
     color: #000;
 }
@@ -84,7 +84,7 @@ li {
     display: none;
     position: absolute;
     right: 2rem;
-    top: 5rem;
+    top: 8rem;
     height: 0;
     width: 80%;
     overflow: hidden;

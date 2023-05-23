@@ -12,35 +12,6 @@
                     src="https://res.cloudinary.com/dcymco5tc/image/upload/v1684431240/media/logo-lesjardins_1_xb8rxp.webp">
             </a>
         </div>
-        <!-- Account and shopping bag -->
-        <div class="shopping">
-            <a class="nav-link d-block d-lg-none dropdown shopping_txt txt-right" href="#" id="user-options"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user fa-lg shopping_icon"></i>My Account
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Product Management</a>
-                {% endif %}
-                <a href="" class="dropdown-item">My Profile</a>
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                {% endif %}
-            </div>
-            <!-- Shopping Bag -->
-            <a class="{% if grand_total %}{% else %}text-black{% endif %} nav-link d-block d-lg-none shopping_txt"
-                href="{% url 'view_bag' %}">
-                <i class="fa-solid fa-basket-shopping shopping_icon"></i>
-                {% if grand_total %}
-                {{ grand_total|floatformat:2 }} €
-                {% else %}
-                0.00 €
-                {% endif %}
-            </a>
-        </div>
         <!-- Products menu -->
         <div>
             <ul class="links">
@@ -58,6 +29,35 @@
                         <i class="fa-solid fa-jar menu_icon"></i></a>
                 </li>
             </ul>
+        </div>
+        <!-- Account and shopping bag -->
+        <div class="shopping">
+            <a class="nav-link d-block dropdown shopping_txt txt-right" href="#" id="user-options"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user fa-lg shopping_icon"></i>My Account
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Product Management</a>
+                {% endif %}
+                <a href="" class="dropdown-item">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+            </div>
+            <!-- Shopping Bag -->
+            <a class="{% if grand_total %}{% else %}text-black{% endif %} nav-link d-block shopping_txt"
+                href="{% url 'view_bag' %}">
+                <i class="fa-solid fa-basket-shopping shopping_icon"></i>
+                {% if grand_total %}
+                {{ grand_total|floatformat:2 }} €
+                {% else %}
+                0.00 €
+                {% endif %}
+            </a>
         </div>
         <!-- Hamburger menu icon -->
         <div class="toggle_btn">
