@@ -12,6 +12,7 @@ html {
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
+    max-width: 100%;
 }
 
 h1 {
@@ -59,6 +60,16 @@ footer a:hover {
 /* Home page */
 .hp-punchline {
     background-color: #B6C47F;
+}
+
+article a,
+article a:active {
+    color: #65009C;
+    text-decoration: underline;
+}
+
+article a:hover {
+    color: #333333;
 }
 
 /* Buttons */

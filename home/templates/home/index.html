@@ -11,88 +11,127 @@
 
 
 {% block content %}
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="https://res.cloudinary.com/dcymco5tc/image/upload/v1681313815/media/hp-vegetables_v7xyd1.webp"
-                class="d-block w-100" alt="...">
+<section>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://res.cloudinary.com/dcymco5tc/image/upload/v1681313815/media/hp-vegetables_v7xyd1.webp"
+                    class="d-block w-100" alt="Fresh vegetables on the table">
+            </div>
+            <div class="carousel-item">
+                <img src="https://res.cloudinary.com/dcymco5tc/image/upload/v1684913194/media/plants-hands_qjtwd7.webp"
+                    class="d-block w-100" alt="Hands taking care of plants" </div>
+                <div class="carousel-item">
+                    <img src="https://res.cloudinary.com/dcymco5tc/image/upload/v1684913195/media/potatoes-bag_vz5svm.webp"
+                        class="d-block w-100" alt="Big bag of potatoes">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <div class="carousel-item">
-            <img src="https://res.cloudinary.com/dcymco5tc/image/upload/v1683719055/media/zoe-schaeffer-H0iAXFekiWo-unsplash_r3pbze.webp"
-                class="d-block w-100" alt="...">
+</section>
+<section>
+    <div class="container mx-auto">
+        <div>
+            <h2 class="text-uppercase title text-center my-4">Why buy vegetables and fruits from us ?</h2>
         </div>
-        <div class="carousel-item">
-            <img src="https://res.cloudinary.com/dcymco5tc/image/upload/v1683719055/media/jonathan-kemper-ljqsrSZ4eek-unsplash_odlwwn.webp"
-                class="d-block w-100" alt="...">
+        <div class="row">
+            <div class="col-md-6 my-4">
+                <h3 class="text-uppercase title text-center">Fresh products guaranteed <i
+                        class="fa-solid fa-snowflake"></i>
+                </h3>
+                <p>The products are picked up according to the orders, day by day, which <strong>assures you to
+                        have the freshest quality</strong> possible.</p>
+            </div>
+            <div class="col-md-6 my-4">
+                <h3 class="text-uppercase title text-center">Top Quality <i class="fa-solid fa-heart"></i></h3>
+                <p>Quality is <strong>our priority</strong>. We take care of our land, our plants and therefore
+                    the products that will be in your plate</p>
+            </div>
+            <div class="col-md-6 my-4">
+                <h3 class="text-uppercase title text-center">Finance a local producer <i
+                        class="fa-solid fa-piggy-bank"></i>
+                </h3>
+                <p>Buying from local producers allows us to <strong>support sustainable agriculture</strong> and
+                    to allow a family to live from its work</p>
+            </div>
+            <div class="col-md-6 my-4">
+                <h3 class="text-uppercase title text-center">Know what you're eating <i
+                        class="fa-solid fa-circle-info"></i>
+                </h3>
+                <p>We are able to give you the <strong>traceability of each product</strong>. And to see it with
+                    your own eyes, you are welcome to visit the farm to know where your fruits and vegetables
+                    grow</p>
+            </div>
         </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="container hp-punchline my-4 col-10">
-            <div class="row">
-                <div class="my-4 mx-auto">
-                    <h1 class="text-uppercase text-center">
-                        Eat better, eat local !
-                    </h1>
-                    <div class="my-4 col-12">
-                        <h4 class="text-center">
-                            <a href="{% url 'products' %}"
-                                class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3 title">See the
-                                products</a>
-                        </h4>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="container hp-punchline my-4 col-10">
+                <div class="row">
+                    <div class="my-4 mx-auto">
+                        <h1 class="text-uppercase text-center">
+                            Eat better, eat local !
+                        </h1>
+                        <div class="my-4 col-12">
+                            <h4 class="text-center">
+                                <a href="{% url 'products' %}"
+                                    class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3 title">See the
+                                    products</a>
+                            </h4>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+</section>
+<article>
+    <div class="container p-4 mx-auto">
+        <h2 class="text-uppercase title text-center">Our Vision</h2>
+        <h3 class="text-uppercase title">Respectful agriculture</h3>
+        <p>
+            Our farm, <em>Les Jardins de Valentin</em>, is part of a human, respectful and fraternal vision of <a
+                href="https://en.wikipedia.org/wiki/Permaculture" target="_blank"
+                title="This is permaculture article on Wikipedia">permaculture</a>. Also called
+            sustainable agriculture, permaculture is a <strong>process of respecting the soil, nature and
+                biodiversity</strong>. When ecosystems are observed and imitated in their natural cycles, it is
+            possible to grow wonderful fruits and vegetables <strong>while respecting the environment and the health of
+                people</strong>.</p>
+        <br>
+        <h3 class="text-uppercase title">Taking care of your health with food</h3>
+        <p>Hippocrates, the ancient Greek physician, said "<strong>Let your food be your first medicine</strong>". We
+            have lost the
+            taste for food and are feeding our bodies with empty nutrients. The <a
+                href="https://www.who.int/health-topics/nutrition#tab=tab_1" target="_blank"
+                title="This is the WHO website about nutrition">World Health
+                Organization</a> has a lot of information about nutrition. To <strong>regain full health and
+                vitality</strong>, we must absolutely put life back on our plates. That means <strong>vegetables at
+                every meal and fruit every day!</strong></p>
+        <br>
+        <h3 class="text-uppercase title">Treat yourself to healthy foods</h3>
+        <p>No, vegetables are not boring! They can be <strong>so tasty and full of flavor</strong>. World renowned chefs
+            <a href="https://www.jamieoliver.com/recipes/category/special-diets/vegetarian/" target="_blank"
+                title="This is the Jamie Oliver's vegetarian recipes">Jamie
+                Olivier</a> and <a href="https://ottolenghi.co.uk/recipes/vegetarian-recipes" target="_blank"
+                title="This is the Yottan Ottlenghi's vegetarian recipes">Yotam
+                Ottolenghi</a> have vegetarian recipe blogs. Check them out and <strong>learn how to cook vegetables
+                and spices</strong> for the benefit of your family and your health!</p>
+        </p>
     </div>
-    <section>
-        <div class="container mx-auto">
-            <div>
-                <h2 class="text-uppercase title text-center my-4">Why buy vegetables and fruits from us ?</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-6 my-4">
-                    <h3 class="text-uppercase title text-center">Fresh products guaranteed <i class="fa-solid fa-snowflake"></i>
-                    </h3>
-                    <p>The products are picked up according to the orders, day by day, which <strong>assures you to
-                            have the freshest quality</strong> possible.</p>
-                </div>
-                <div class="col-md-6 my-4">
-                    <h3 class="text-uppercase title text-center">Top Quality <i class="fa-solid fa-heart"></i></h3>
-                    <p>Quality is <strong>our priority</strong>. We take care of our land, our plants and therefore
-                        the products that will be in your plate</p>
-                </div>
-                <div class="col-md-6 my-4">
-                    <h3 class="text-uppercase title text-center">Finance a local producer <i class="fa-solid fa-piggy-bank"></i>
-                    </h3>
-                    <p>Buying from local producers allows us to <strong>support sustainable agriculture</strong> and
-                        to allow a family to live from its work</p>
-                </div>
-                <div class="col-md-6 my-4">
-                    <h3 class="text-uppercase title text-center">Know what you're eating <i class="fa-solid fa-circle-info"></i>
-                    </h3>
-                    <p>We are able to give you the <strong>traceability of each product</strong>. And to see it with
-                        your own eyes, you are welcome to visit the farm to know where your fruits and vegetables
-                        grow</p>
-                </div>
-            </div>
-        </div>
-    </section>
+</article>
 </div>
 
 {% endblock %}
