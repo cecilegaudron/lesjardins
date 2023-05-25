@@ -62,6 +62,11 @@ footer a:hover {
     background-color: #B6C47F;
 }
 
+.home-picture {
+    width: 100%;
+    overflow: hidden;
+}
+
 article a,
 article a:active {
     color: #65009C;
@@ -188,19 +193,6 @@ center and keep font awesome style consistent */
     height: 2px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ 
-.arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
-}
-*/
-
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
     border-bottom-color: #007bff !important;
@@ -278,7 +270,7 @@ center and keep font awesome style consistent */
 }
 
 
-/* -------------------------------- Media Queries */
+/* Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {

@@ -84,7 +84,7 @@ li {
     display: none;
     position: absolute;
     right: 2rem;
-    top: 8rem;
+    top: 50%;
     height: 0;
     width: 80%;
     overflow: hidden;
@@ -131,7 +131,7 @@ li {
     }
 
     .header-container {
-        padding-top: 16%;
+        padding-top: 14%;
     }
 
     .products_menu {
