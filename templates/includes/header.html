@@ -5,15 +5,15 @@
 {% endblock %}
 
 <header>
-    <div class="navbar w-100 bg-white">
-        <div class="col-8 col-sm-6 col-md-4 col-lg-3">
+    <div class="container navbar w-100 bg-white">
+        <div class="row col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <a href="{% url 'home' %}">
                 <img class="img-fluid logo plg-2" alt="Les Jardins logo"
                     src="https://res.cloudinary.com/dcymco5tc/image/upload/v1684431240/media/logo-lesjardins_1_xb8rxp.webp">
             </a>
         </div>
         <!-- Products menu -->
-        <div>
+        <div class="row col-lg-6 col-xl-7" >
             <ul class="links">
                 <li>
                     <a href="{% url 'products' %}?category=vegetables,herbs" class="products_menu">Vegetables
@@ -31,15 +31,15 @@
             </ul>
         </div>
         <!-- Account and shopping bag -->
-        <div class="shopping">
+        <div class="shopping row col-lg-3">
             <a class="nav-link d-block dropdown shopping_txt txt-right" href="#" id="user-options"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user fa-lg shopping_icon"></i>My Account
+                <i class="fas fa-user fa-lg shopping_icon"></i> Account
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Product Management</a>
+                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                 {% endif %}
                 <a href="" class="dropdown-item">My Profile</a>
                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -95,7 +95,7 @@
             <div class="btn-group dropright">
                 <a class="nav-link d-block d-lg-none dropright shopping_txt" href="#" id="user-options"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user fa-lg shopping_icon"></i> My Account
+                    <i class="fas fa-user fa-lg shopping_icon"></i> Account
                 </a>
                 <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
