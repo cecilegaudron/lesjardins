@@ -32,7 +32,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-cecilegaudro-lesjardins-qz5xotnyoyp.ws-eu97.gitpod.io',
@@ -62,7 +62,6 @@ INSTALLED_APPS = [
     'profiles',
     'contact',
     'newsletter',
-    'wishlist',
 
     # Other
     'crispy_forms',
