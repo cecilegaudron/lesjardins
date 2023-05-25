@@ -15,11 +15,6 @@ class ProductForm(forms.ModelForm):
         widget=CustomClearableFileInput
         )
 
-    #our_selection = forms.BooleanField(
-        #widget=CheckboxInput,
-        #required=False
-    #)
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
