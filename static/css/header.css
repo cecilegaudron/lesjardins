@@ -65,7 +65,7 @@ li {
 .shopping_txt,
 .shopping_txt:active {
     font-family: 'Fjalla One', Arial, sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: #000;
 }
@@ -125,8 +125,21 @@ li {
         left: 0;
     }
 
+    .navbar .links,
+    .navbar .shopping {
+        gap: 1rem;
+    }
+
     .header-container {
         padding-top: 16%;
+    }
+
+    .products_menu {
+        font-size: 1.5rem;
+    }
+
+    .shopping_txt {
+        font-size: 1.3rem;
     }
 }
 
