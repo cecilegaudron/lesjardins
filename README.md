@@ -84,6 +84,26 @@ The aim is to make a decent living from selling the farm's produce, attracting n
 We could run promotional campaigns at certain times of the year to attract new customers. Set up a sponsorship system, rewarding the sponsor and the sponsored child with a discount. This action would be broadcast via social networks and why not by email via the newsletter.
 Unfortunately, there's no marketing budget at the moment. The best thing to do would be to turn to free solutions and occasionally buy targeted advertising on social networks.  
 
+### SEO  
+Here are the keywords and phrases that relate to the site's activity as well as what users may search for on Google to come across the Les Jardins e-commerce site.  
+
+-__Short keywords__  
+| Targets | Products | Other |
+| ----------- | ----------- | ----------- | 
+| Individuals | Vegetables |  Local |
+| Restaurants | Fruits |  Environment |
+| Firms | Transform products |  Healthy |
+| Families | Transform products |  Farm |
+|  |  |  Ecology |
+
+-__Long_tail keywords__  
+- How to shop locally
+- How to buy fruits and vegetables locally
+- How to take control of your health
+- How to subscribe to vegetable baskets near me
+- Finance a local producer
+- Know what you're eating
+
 ### Facebook  
 Facebook would serve both as a business card that users can share with friends, a means of informing about new products on sale or events organized at the farm. Customers can also leave reviews to judge their shopping experience.  
 TO BE COMPLETED AVEC FB SCREENSHOT
@@ -116,33 +136,87 @@ Pages 404 and 500 are also available.
 -__Json Files__  
 I decide to create json files for adding my categories and products to the database. This allows me to keep a backup of the database in case I need to reinitialize it. If I upload products and categories directly via the admin panel, I could lose everything. So I prefer to use json files.  
 I then copied the "categories" file from the boutique Ado project. And replace the categories with my own. I then uploaded the categories.json file to the IDE with the **python3 manage.py loaddata categories** command, which retrieves the data stored in this file.  
-To create the JSON file for my products, I first gathered all my information (name, price, image name, image url, category, sku, descriptions, etc.) in an excel document. Then, I converted this excel document into JSON format with [this convertor](https://codebeautify.org/excel-to-json).  
+To create the JSON file for my products, I first gathered all my information (name, price, image name, image url, category, sku, descriptions, etc.) in an excel document.  
+
+![EXCEL DOCUMENT WITH PRODUCTS](/media/screenshots/excel-file-products.png)  
+
+Then, I converted this excel document into JSON format with [this convertor](https://codebeautify.org/excel-to-json).  
 I then formatted this file with (Json Formatter)[https://jsonformatter.org] to make it more compact. I then pasted the data into a "products.json" document and typed the **python3 manage.py loaddata products** command to retrieve the data stored in this file.  
 
 -__Database Diagrams__ 
 - User Profile  
 
-![NEWSETTER DIAGRAM](/media/screenshots/database-profile.png)
+![NEWSETTER DIAGRAM](/media/screenshots/database-profile.png)  
 
-- User Profile  
+- Categories  
 
-![CATEGORY DIAGRAM](/media/screenshots/database-categories.png)
+![CATEGORY DIAGRAM](/media/screenshots/database-categories.png)  
 
 - Product 
 
-![PRODUCT DIAGRAM](/media/screenshots/database-product.png)
+![PRODUCT DIAGRAM](/media/screenshots/database-product.png)  
 
-- Order
+- Order  
 
-![ORDER DIAGRAM](/media/screenshots/database-order.png)
+![ORDER DIAGRAM](/media/screenshots/database-order.png)  
 
-- Contact
+- Contact  
 
-![CONTACT DIAGRAM](/media/screenshots/database-contact.png)
+![CONTACT DIAGRAM](/media/screenshots/database-contact.png)  
 
-- Newsletter  
+- Newsletter    
 
-![NEWSETTER DIAGRAM](/media/screenshots/database-newsletter.png)
+![NEWSETTER DIAGRAM](/media/screenshots/database-newsletter.png)  
+
+### Page Construction  
+I used **Django templates** to build my pages.  
+The source file for html pages is **base.html**. The different content pages use this document to load common elements such as the footer or the navigation, among others. The content pages only contain their own content. The latter calls the header and footer, which are two different files stored in the **"includes" folder**. I made this choice because I want my base.html file to be as clear as possible. There's a lot of information in the footer and header, plus two menus, one for large screens and the collapse menu.  
+The stylesheet is called by the link **{% static 'css/style.css' %}** so that all pages regardless of their location.  
+
+### Menu
+The menu presents the different product categories (vegetables, fruit, other products), as well as access to registration and login to the customer account. There is also access to the profile if the user is logged in. The user also has access to the shopping bag.  
+The menu is condensed when the site is used on a small screen. Products, login information and the shopping bag are then accessed via the hamburger icon. I didn't want to have a dropdown menu to facilitate user experience and reading. I therefore decided to group certain categories under the "other products" link. "Other products" includes dry vegetabes, groceries, plants and seeds.  
+
+### Online Paiement  
+Online payment is handled by the **Stripe service**. There are a number of steps involved in getting the service up and running. You can help yourself with the Stripe documentation for installation.  
+
+To use Stripe's services, you need to set up an account and confirm your e-mail address. The latter gives access to the developer mode, which enables you to test whether online payment works correctly on your site. All you need to do is enter a fictitious card (made up of a series of numbers 42) to run the tests.  
+
+![STRIPE DEVELOPER VIEW](/media/screenshots/stripe-developers-view.png) 
+
+In addition to the various information to be included in the settings.py document, the public and secret keys to be entered in the env.py document (so that they remain hidden when the site goes online) and in the Config Vars in the Heroku settings, you need to add the Javascript line **<script src="https://js.stripe.com/v3/"></script>** in the **{% corejs %}** block of the base.html page. Stripe recommends adding this line in this document so that the service is accessible on all pages of the site, which allows some of their more advanced fraud detection features to work.  
+
+### Features  
+-__Home Page__  
+The Home Page welcomes the user with a photo of vegetables, so that at a glance the user has an idea of the products sold on the site. A button gives access to all the products. Text informs the user of the company's activities and values, and provides SEO information. Important words are then placed either in headlines or in bold.  
+
+-__Products__  
+The page presents all the products on sale on the website. Items are presented with product name, photo, selling price, selling weight and weight per kilo.  
+
+-__Product Details__  
+Each product has its own dedicated page. On it, the user can find the product image, the artist's name, the weight per kilo, the sales weight (i.e. how much is sold for one unit of the product) and the sales price.
+A brief description presents the product, with cooking instructions or tasting suggestions. It is possible to choose a quantity and add this selection to the basket.  
+
+-__Shopping Bag__  
+The shopping basket enables users to identify at a glance the items they have selected and wish to purchase. The photo and name of the product are of course shown, along with the weight, quantity and selling price. The latter is multiplied by the quantity if several units have been selected.  
+
+The user can view the amount of the products, the shipping costs and the total amount to be paid. Shipping costs are 10% of the total amount. The user can decide to modify products, add or subtract quantities, or remove the product from the basket. The amounts to be paid and shipping costs are then automatically updated. Finally, the user can decide whether to continue shopping or proceed to payment by clicking on "Secure checkout".  
+
+![SHOPPING BAG](/media/screenshots/shopping-bag.png)  
+
+-__Checkout__  
+This page allows the user to enter personal information. These are automatically filled in if the user has a customer account. 
+Bank details are entered here. Online payment is handled by Stripe. An email is sent to the user to confirm the order.  
+
+![CHECKOUT](/media/screenshots/checkout.png)  
+
+-__Order Confirmation__  
+TO BE COMPLETED parler des emais de confirmation également
+![STRIPE DEVELOPER VIEW](/media/screenshots/stripe-developers-view.png) 
+
+
+
+
 
 [Go back to the Table of content](#table-of-content)  
 
