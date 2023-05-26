@@ -1,11 +1,12 @@
 # Les Jardins  
 Les Jardins de Valentin is a fictitious e-commerce site. It's an educational project for Code Institute's Full Stack Developer specialization E-Commerce diploma.  
 
-## Table of Content
--  [First Approach](#first-approach)
--  [Agile](#agile)
--  [Visual Design](#visual-design)
--  [Marketing](#marketing)
+## Table of Content  
+-  [First Approach](#first-approach)  
+-  [Agile](#agile)  
+-  [Visual Design](#visual-design)  
+-  [Marketing](#marketing)  
+-  [Development](#development)  
 
 ## First Approach  
 ### The project in a few words  
@@ -93,7 +94,55 @@ The [link](https://www.privacypolicygenerator.info/live.php?token=5wXhzvlMcnTpFj
 
 [Go back to the Table of content](#table-of-content)  
 
+## Development  
+The organization of the website is very simple. It is composed of several content pages, accessible to all:  
+- Home page  
+- Products  
+- Contact  
+- Shopping Bag  
+- Checkout  
 
+Login pages for: 
+- register  
+- log in  
+- log out  
+- edit the profile  
+
+Admins have access to a dedicated area where they can consult lists of users and orders, as well as lists of products and their categories. Like users, they can also manage the catalog by logging on to the website. They can add, edit or delete products.   
+ 
+Pages 404 and 500 are also available. 
+
+### Database  
+-__Json Files__  
+I decide to create json files for adding my categories and products to the database. This allows me to keep a backup of the database in case I need to reinitialize it. If I upload products and categories directly via the admin panel, I could lose everything. So I prefer to use json files.  
+I then copied the "categories" file from the boutique Ado project. And replace the categories with my own. I then uploaded the categories.json file to the IDE with the **python3 manage.py loaddata categories** command, which retrieves the data stored in this file.  
+To create the JSON file for my products, I first gathered all my information (name, price, image name, image url, category, sku, descriptions, etc.) in an excel document. Then, I converted this excel document into JSON format with [this convertor](https://codebeautify.org/excel-to-json).  
+I then formatted this file with (Json Formatter)[https://jsonformatter.org] to make it more compact. I then pasted the data into a "products.json" document and typed the **python3 manage.py loaddata products** command to retrieve the data stored in this file.  
+
+-__Database Diagrams__ 
+- User Profile  
+
+![NEWSETTER DIAGRAM](/media/screenshots/database-profile.png)
+
+- User Profile  
+
+![CATEGORY DIAGRAM](/media/screenshots/database-categories.png)
+
+- Product 
+
+![PRODUCT DIAGRAM](/media/screenshots/database-product.png)
+
+- Order
+
+![ORDER DIAGRAM](/media/screenshots/database-order.png)
+
+- Contact
+
+![CONTACT DIAGRAM](/media/screenshots/database-contact.png)
+
+- Newsletter  
+
+![NEWSETTER DIAGRAM](/media/screenshots/database-newsletter.png)
 
 [Go back to the Table of content](#table-of-content)  
 
