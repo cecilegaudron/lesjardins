@@ -57,9 +57,6 @@ class Product(models.Model):
         max_digits=6,
         decimal_places=2
     )
-    # our_selection = models.BooleanField(
-    # default=False,
-    # )
     image_url = models.URLField(
         null=True,
         blank=True
