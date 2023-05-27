@@ -309,38 +309,7 @@ Les Jardins could offer users the chance to subscribe to weekly or monthly baske
 [Go back to the Table of content](#table-of-content)  
 
 ## Testing  
-### Validator Testing  
-- HTML  
-Many errors are mentioned in the [W3C validator](https://validator.w3.org/nu/). These are errors in my responsive navbar. Unfortunately, I haven't had the time to rework this navbar from scratch in order to correct the erroneous code.  
-
-- CSS  
-No errors were found when passing through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/)  
-
-- JavaScript  
-I didn't write my own Javascript code, so I don't need to check it.  
-
-- Python  
-My IDE has a built-in python code checker, so I do the checks as I went along. Some lines are too long, but I chose not to cut them in order to keep a better visibility.  
-
-### Lighthouse  
-Unfortunately, I don't score well with Lightouse, especially in "performance". I was unable to improve this score in the time available.  
-
-![LIGHTHOUSE MOBILE](/media/screenshots/lighthouse-mobile.png)  
-
-![LIGHTHOUSE DESK](/media/screenshots/lighthouse-desk.png)  
-
-### Manual Testings  
-I do some manual testings, they are stocked in this document [testings.md](/TESTINGS.md) 
-
-### Unfixed Bugs  
-I have a lot of unfixed bugs, I can't fix them because I haven't had the time to do it correctly. I am so sorry about that and I am sad to submit a project with bugs.  
-
-- I'm also having a problem with the user account and shopping bag part of the menu with the desk screen. When clicking to log in, the menu is displayed horizontally. 
-
-- The most incomprehensible bug is the error : [Errno 101] Network is unreachable  
-I want to confirm the admin account from the front end because I had to reset my database a few days ago and I can't confirm it even though the account is active and accessible via the admin panel.  I don't understand why.  
-
-[Go back to the Table of content](#table-of-content)  
+The content about testing is stocked in this document [testing.md](/TESTING.md)  
 
 ## Deployment  
 The website has been deployed via Heroku.  The project is created on GitHub with the 'gitpod full template' provided by [Code Institute](https://github.com/Code-Institute-Org/gitpod-full-template).
