@@ -235,7 +235,107 @@ TO BE COMPLETED parler des emais de confirmation également
 
 [Go back to the Table of content](#table-of-content)  
 
+## Deployment  
+The website has been deployed via Heroku.  The project is created on GitHub with the 'gitpod full template' provided by [Code Institute](https://github.com/Code-Institute-Org/gitpod-full-template).
 
+The project name is lesjardins.  
+
+-__Install Django and supporting libraries__  
+On Gitpod, it is necessary to install Django and supporting libraries. I decide to follow the deployment steps proposed by Code Institute.
+
+1. Install Django4, psycopg2 and Cloudinary  
+>pip3 install 'django<4' gunicorn  
+>pip3 install dj_database_url psycopg2  
+>pip3 install dj3-cloudinary-storage  
+
+2. Then create the requirements file with the command :  
+>pip3 freeze --local > requirements.txt  
+
+-__Create an external database__  
+ElephantSQL is the service of choice for creating an external database.
+
+1. Create a free account  
+2. Create new instance  
+3. Name the database with the project name  
+4. Choose a geographical region  
+5. Copy the URL of the database  
+
+-__Create an app in Heroku__  
+1. Create a new app  
+2. Open the Settings tab  
+3. Reveal Config Vars  
+4. Add a new Config Var called DATABASE_URL and paste the external database URL as the value  
+5. Add a new Config Var called SECRET_KEY and paste my Secret Key  
+
+-__Create the env.py file__  
+This file contains the secret datas about the project.  
+
+>import os os.environ["DATABASE_URL"] = "Paste the database URL" os.environ["SECRET_KEY"] = "My Secret Key"  
+
+-__Prepare the environment__  
+1. Do a reference to the env.py on the settings file.  
+>import os import dj_database_url  
+>  
+>if os.path.isfile("env.py"): import env  
+
+2. Remove the secret key and link it to the SECRET_KEY variable on Heroku.  
+>SECRET_KEY = os.environ.get('SECRET_KEY')  
+
+3. Comment out the old database section. And paste a new database paragraph and link to the DATABASE_URL variable on Heroku.  
+>DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL")) }  
+
+4. Make the migrations.  
+
+-__Create the media files stored__  
+1. Cloudinary is the service used to stored the media.  
+
+2. Need to create an account  
+3. Copy the API Environment Variable available in the dashboard  
+4. In the env.py file, paste the API previously copied  
+>os.environ["CLOUDINARY_URL"] = "cloudinary://************************"  
+
+5. Create a Config Vars in Heroku and to paste the API previously copied as a value  
+6. Create a new Config Vars with DISABLE_COLLECTSTATIC as key and 1 as value. I will remove this new entry at the end of the project.  
+7. Add Cloudinary libraries to the installed apps in settings.py :  
+>'cloudinary_storage', 'cloudinary',  
+
+8. Specify to Django to use Cloudinary to store media and static files  
+>STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage' STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
+>  
+>MEDIA_URL = '/media/' DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'  
+
+9. Link with the templates directory :  
+>TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')  
+
+10. Change the templates directory :  
+>'DIRS': [TEMPLATES_DIR],  
+
+11. Add Heroku Hostname to ALLOWED_HOSTS  
+12. Create three new folders : media, static and templates  
+13. Create a new file with the name Procfile  
+14. In the Procfile file, add the code :  
+>web: gunicorn outscape.wsgi  
+
+-__Deployment on Heroku__  
+1. On Heroku, choose GitHub as the deployment method
+2. Connect Heroku with the project on GitHub
+3. Be sure to select the main branch on the Manual Deploy section
+4. Click on the Deploy branch button
+
+The site is live here : [les-jardins.herokuapp.com](https://les-jardins.herokuapp.com)  
+
+### Fork repository  
+The steps to fork a repository are :  
+- Go on the GitHub repository  
+- Click on the Fork button  
+
+### Clone project  
+The steps to create a local clone are :  
+- Go on the GitHub repository  
+- Click on the Code button  
+- On the Code tab, choose the HTTPS and copy the URL  
+- On the fav IDE, like VS Studio Code, type git clone and paste the URL ($ git clone https://github.com/username/repository)  
+- Enter to create the local clone  
 
 [Go back to the Table of content](#table-of-content)  
 
