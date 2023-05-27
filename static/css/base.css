@@ -63,7 +63,6 @@ footer a:hover {
 }
 
 .home-picture {
-    width: 100%;
     overflow: hidden;
 }
 
@@ -120,7 +119,7 @@ center and keep font awesome style consistent */
 .btn-outline-black {
     background: white;
     color: black !important;
-    border: 1px solide black;
+    border: 1px solid black;
 }
 
 .btn-outline-black:hover,
@@ -164,10 +163,6 @@ center and keep font awesome style consistent */
 }
 
 /* Products list and details */
-.product_img:hover {
-    scale: 1.02;
-}
-
 .product_img {
     border-radius: 5%;
 }

@@ -32,10 +32,6 @@ header {
     display: none;
 }
 
-.logo:hover {
-    scale: 1.05;
-}
-
 li {
     list-style: none;
 }
@@ -98,7 +94,6 @@ li {
     padding: 0.7rem;
     margin: 1rem;
     display: flex;
-    align-items: left;
     justify-content: left;
 }
 
