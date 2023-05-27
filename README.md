@@ -201,6 +201,34 @@ To use Stripe's services, you need to set up an account and confirm your e-mail 
 
 In addition to the various information to be included in the settings.py document, the public and secret keys to be entered in the env.py document (so that they remain hidden when the site goes online) and in the Config Vars in the Heroku settings, you need to add the Javascript line **<script src="https://js.stripe.com/v3/"></script>** in the **{% corejs %}** block of the base.html page. Stripe recommends adding this line in this document so that the service is accessible on all pages of the site, which allows some of their more advanced fraud detection features to work.  
 
+### Email Management  
+To send emails to the users, to confirm them their account or their order, you can use Gmail. You need to connect to a Gmail account, or create one. Then go to :  
+- Settings > Accounts and import > Other Google Account Settings > Security  
+- Click on "Signing in to Google"  
+- 2-Step Verification is used to create an app password to allow Django to use the Gmail account to send emails  
+- Enter password and telephone number to verify the account  
+- Go to App password and create one  
+- Select “Mail” and call it “Django Send Email”  
+- Copy the password  
+- Go on Heroku and add a new variable called EMAIL_HOST_PASS and paste the password as value  
+- Add also a new variable called EMAIL_HOST_USER and paste the email address as value  
+
+Then go to the settings.py file and add a few new settings at the end of the file:  
+
+![EMAIL SENDING SETTINGS](/media/screenshots/email-sending-settings.png) 
+
+### Newsletter  
+To send newsletters via the Mailchimp service, follow these steps:  
+1. Install mailchimp with the command:  
+>pip3 install mailchimp-marketing  
+2. Create a mailchimp account  
+3. go to Account, Extra and create an API key  
+4. Copy this API key and paste it into the env.py file  
+5. Then go to the Audience tab and select Settings and Audience name and detaults  
+Copy the Audience ID and paste it into settings.py  
+
+![MAILCHIMP SETTINGS](/media/screenshots/mailchimp-settings.png) 
+
 ### Features  
 -__Home Page__  
 The Home Page welcomes the user with a photo of vegetables, so that at a glance the user has an idea of the products sold on the site. A button gives access to all the products. Text informs the user of the company's activities and values, and provides SEO information. Important words are then placed either in headlines or in bold.  
@@ -221,17 +249,71 @@ The user can view the amount of the products, the shipping costs and the total a
 
 -__Checkout__  
 This page allows the user to enter personal information. These are automatically filled in if the user has a customer account. 
-Bank details are entered here. Online payment is handled by Stripe. An email is sent to the user to confirm the order.  
+Bank details are entered here. Online payment is handled by Stripe.  
 
 ![CHECKOUT](/media/screenshots/checkout.png)  
 
 -__Order Confirmation__  
-TO BE COMPLETED parler des emais de confirmation également
-![STRIPE DEVELOPER VIEW](/media/screenshots/stripe-developers-view.png) 
+The order confirmation allows the user to view his order summary. This shows them what they have ordered, their personal details and the total to be paid.  
 
+![ORDER CONFIRMATION](/media/screenshots/order-confirmation.png)  
 
+-__Newsletter__  
+The user can choose to subscribe to the newsletter in order to receive the latest news from the farm. Only email and name are required. The name allows us to send more personalized emails by displaying the customer's name. The newsletter is sent via the Mailchimp service.   
 
+![NEWSLETTER](/media/screenshots/newsletter.png)  
 
+-__Profile__  
+Users can register with their e-mail address, a username and a password to create a personal account on the website. As with any other e-commerce site, this account enables the user to save personal information such as their postal address, so that they don't have to enter it again if they order from the site. This page also provides an order history.  
+
+-__Confirmation Emails__  
+The user receives emails to validate his account, if he forgets his password, and so on.
+It is possible to personalize these emails, making them dynamic by displaying the information entered by the user.  
+
+![CONFIRMATION EMAILS](/media/screenshots/confirmation-email.png)  
+
+-__Contact__
+The user can send a message to the site administrators to request more information, for example. The user must enter his or her name, e-mail address, telephone number (optional) and message.  
+
+-__Admin Panel__  
+The admin panel gives the administrator access to information concerning his activity:   
+- users, where it is possible to view personal information concerning users registered on the site  
+- orders, the administrator can view all orders placed on his website, with date, amount, customer information and, of course, order details 
+- categories  
+- products  
+
+-__Add Product__  
+The administrator doesn't need to go to the Admin panel to add products to his online catalog. To do so, it is possible to add an item directly, along with its information and photo, by clicking on the little man in the superuser account and selecting "Product Management".  
+
+-__Edit Product__  
+Like adding a product, the administrator can edit an item without going to the Admin panel. It is possible to modify all the information attached to a product.  
+
+-__Delete Product__  
+The administrator can also delete a product from his online catalog directly from the website, without being connected to the admin panel.  
+
+### Features Left to Implement  
+-__Instagram Account__  
+An Instagram account is especially useful when it's possible to take new photos and tell a story to involve web users in your business. What's more, users are looking for the human and the local on platforms like Instagram.  
+
+-__Stock management__  
+It would be useful to be able to add stock information so that administrators could keep track of their sales. It would be a real shame if there were sales on a product that was no longer available.  
+
+-__Recipe blog__  
+A blog allows you to add new content to your website on a regular basis. Sharing cooking recipes featuring the products sold on the site would offer ideas to Internet users, who might then take the plunge and buy certain vegetables with which they are not familiar.  
+
+-__Basket subscription__  
+Les Jardins could offer users the chance to subscribe to weekly or monthly baskets. This provides a fixed income stream and builds customer loyalty. Customers can then have a basket of fruit and/or vegetables delivered to their home on a regular basis, at their own pace.  
+
+[Go back to the Table of content](#table-of-content)  
+
+## Testing  
+### Validator Testing  
+
+### Lighthouse  
+
+### Manual Testings  
+
+### Unfixed Bugs  
 
 [Go back to the Table of content](#table-of-content)  
 
