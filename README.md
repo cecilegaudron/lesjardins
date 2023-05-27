@@ -239,6 +239,47 @@ TO BE COMPLETED parler des emais de confirmation également
 
 [Go back to the Table of content](#table-of-content)  
 
+## Technologies  
+1. **Languages**  
+- HTML  
+- CSS  
+- JAVASCRIPT  
+- PYTHON  
+- MARKDOWN  
+
+2. **Cloud Services, Frameworks...**  
+- [GitHub](https://github.com/), service to store the project  
+- [Gitpod](hhttps://www.gitpod.io/), IDE for building the project  
+- Codeanywhere
+- [Heroku](https://www.heroku.com/), for deploying the project  
+- [Cloudinary](https://cloudinary.com/), images cloud  
+- [ElephantSQL](https://www.elephantsql.com/), PostgreSQL databases service  
+- [Gunicorn](https://gunicorn.org/), server for Django on Heroku  
+- [Django 3.2](https://www.djangoproject.com/), Python Framework  
+- [Bootstrap 5](https://getbootstrap.com/docs/4.3/getting-started/introduction/), front-end Framework  
+- [PostgreSQL](https://www.postgresql.org/), open source database  
+- [BulkResize](https://bulkresizephotos.com/en), for resizing images  
+- [Code Beautify](https://codebeautify.org/excel-to-json), to convert an excel file to a JSON file  
+- [JSON formatter](https://jsonformatter.org), to format my JSON file  
+
+3. **Libraries, Packages, Applications**  
+- [Font Awesome](https://fontawesome.com/), icons website  
+- [Google Fonts](https://fonts.google.com/), fonts website  
+- [allauth](https://django-allauth.readthedocs.io/en/latest/), user accounts management  
+- [dj_database_url](https://pypi.org/project/dj-database-url/), PostgreSQL library  for Django  
+- [pyscopg2](https://www.psycopg.org/docs/), Database adapter for Django  
+- [dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/), Cloudinary integration to Django  
+- [Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/install.html), for more stylish forms  
+- [Pillow](https://pillow.readthedocs.io/en/stable/), to use the ImageField  
+- [Stripe](https://stripe.com/), an online payment service  
+- [mailchimp](/fr/?currency=EUR), a newsletter service  
+
+4. **Softwares**  
+- Illustrator  
+The logo was created with Illustrator software in order to create a vector file capable of being printed in high resolution as well as being displayed on a website with a mini weight. In addition, the vector format allows for a responsive image, as it adapts to different screen sizes.  
+
+- InDesign  
+The wireframes were made with InDesign software. This is not the software commonly used on this kind of file, but I know this software well because I've been using it for years, I feel at ease on it and I spend less time making the wireframes with this software than with a more common online solution.  
 
 [Go back to the Table of content](#table-of-content)  
 
@@ -253,8 +294,7 @@ TO BE COMPLETED parler des emais de confirmation également
 
 ### Media  
 -__Logo__  
-I use this [illustration](https://fr.freepik.com/vecteurs-libre/fond-secousse-jardinage-design-plat-feuilles_25002112.htm#query=jardin&position=20&from_view=search&track=sph) from [Freepik](https://fr.freepik.com/) for my logo.
-
+I use this [illustration](https://fr.freepik.com/vecteurs-libre/fond-secousse-jardinage-design-plat-feuilles_25002112.htm#query=jardin&position=20&from_view=search&track=sph) from [Freepik](https://fr.freepik.com/) for my logo.  
 
 -__Photos__ 
 - Photo by [Rodrigo dos Reis](https://unsplash.com/@rodreis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") on [Unsplash](https://unsplash.com/fr/photos/h3AkzboxK4Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
