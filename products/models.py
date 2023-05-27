@@ -4,8 +4,8 @@ from django.db import models
 class Category(models.Model):
     """
     Database model for categories
+    Tell Django to write the correct plurial name
     """
-    # Tell Django to write the correct plurial name
     class Meta:
         verbose_name_plural = 'Categories'
 
