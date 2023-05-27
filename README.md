@@ -9,6 +9,10 @@ Unfortunately, I've been caught in time that I haven't been successfull to corre
 -  [Visual Design](#visual-design)  
 -  [Marketing](#marketing)  
 -  [Development](#development)  
+-  [Testing](#testing)  
+-  [Deployment](#deployment)  
+-  [Technologies](#technologies)  
+-  [Credits](#credits) 
 
 ## First Approach  
 ### The project in a few words  
@@ -512,6 +516,3 @@ I use this [illustration](https://fr.freepik.com/vecteurs-libre/fond-secousse-ja
 - Photo by [Łukasz Rawa](https://unsplash.com/de/@lukasz_rawa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/HoEYJxkVJk8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
 - Photo by [Thomas Gamstaetter](https://unsplash.com/@thomasgamstaetter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/IFGVE61AAno?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
 - [No Save Icon Format](https://www.freeiconspng.com/img/23494) on [Free icons png](https://www.freeiconspng.com)  
-
-
-  
