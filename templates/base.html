@@ -8,8 +8,10 @@
   <!-- Required meta tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="TO BE COMPLETED">
-  <meta name="keywords" content="TO BE COMPLETED">
+  <meta name="description"
+    content="Les Jardins de Valentin is a family farm in Un Endroit in France. Take the control of your health and know wxactly what you are eating by buying local fruits and vegetables. ">
+  <meta name="keywords"
+    content="vegetable, fruit, transform product, herb, grocery, plant, seed, ecology, farm, healthy, un endroit, france, regional, environment, local, family, families, individual, restaurant, firm, ">
   <meta name="author" content="CÉcile Gaudron">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   {% endblock %}
@@ -59,20 +61,20 @@
   {% if messages %}
   <div class="message-container">
     {% for message in messages %}
-    {% with message.level as level %}
-    {% if level == 40 %}
-    <!-- Error message -->
-    {% include 'includes/toasts/toast_error.html' %}
-    {% elif level == 30 %}
-    <!-- Warning message -->
-    {% include 'includes/toasts/toast_warning.html' %}
-    {% elif level == 25 %}
-    <!-- Success message -->
-    {% include 'includes/toasts/toast_success.html' %}
-    {% else %}
-    {% include 'includes/toasts/toast_info.html' %}
-    {% endif %}
-    {% endwith %}
+      {% with message.level as level %}
+      {% if level == 40 %}
+        <!-- Error message -->
+        {% include 'includes/toasts/toast_error.html' %}
+      {% elif level == 30 %}
+        <!-- Warning message -->
+        {% include 'includes/toasts/toast_warning.html' %}
+      {% elif level == 25 %}
+        <!-- Success message -->
+        {% include 'includes/toasts/toast_success.html' %}
+      {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+      {% endif %}
+      {% endwith %}
     {% endfor %}
   </div>
   {% endif %}
