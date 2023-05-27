@@ -243,4 +243,58 @@ TO BE COMPLETED parler des emais de confirmation également
 [Go back to the Table of content](#table-of-content)  
 
 ## Credits
-### Photos
+- I use this [video](https://www.youtube.com/watch?v=GdrbE-s5DgQ) to help me with the responsive nav bar.
+
+### Thank you  
+- A special thank you to my mentor Rory Patrick Sheridan who helped me a lot to understand my problems, who encourages me and gives me good advice throughout the project.  
+- A huge thank you to my man who believes in me all the time and who thinks that what I do is great.  
+- Thanks to the tutorial support for their technical help and their insight.  
+- Thanks to my friends on Slack who helped me to solve problems in a few clicks.  
+
+### Media  
+-__Logo__  
+I use this [illustration](https://fr.freepik.com/vecteurs-libre/fond-secousse-jardinage-design-plat-feuilles_25002112.htm#query=jardin&position=20&from_view=search&track=sph) from [Freepik](https://fr.freepik.com/) for my logo.
+
+
+-__Photos__ 
+- Photo by [Rodrigo dos Reis](https://unsplash.com/@rodreis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") on [Unsplash](https://unsplash.com/fr/photos/h3AkzboxK4Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Kerstin Wrba](https://unsplash.com/fr/@kerstinwrba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/zeInZepl_Hw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Jason Leung](https://unsplash.com/@ninjason?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/Q5wFjKYM-Sk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [ABHISHEK HAJARE](https://unsplash.com/@abhishek_hajare?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/D9h2-RxM1rE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Martin Adams](https://unsplash.com/@martinadams?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/5XXfyMMan84?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Empreinte](https://unsplash.com/@ewafournier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/0RmLXMMEJKo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Cyrus Crossan](https://unsplash.com/@cys_escapes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/BAQPTB2D5NM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Jennifer Schmidt](https://unsplash.com/@jsfoodphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/0XVrBLy73rw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [K8](https://unsplash.com/@_k8_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/GHRT9j21m2M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Nathan Nugent](https://unsplash.com/ko/@nathan_nugent_photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/6AAptb2kBak?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Nathan Dumlao](https://unsplash.com/@nate_dumlao?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/mJHF7dlPeIo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [SIMON LEE](https://unsplash.com/@simonppt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/bHWRSq8fUUE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Rob Pumphrey](https://unsplash.com/@robpumphrey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/_f26vO7Cg_g?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Aditya Rathod](https://unsplash.com/@adityareds?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/T0dwNpQlUlY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Paul Hanaoka](https://unsplash.com/@plhnk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/HqslonbcCJE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Jeremy Ricketts](https://unsplash.com/@jeremydgreat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/h4zs8fbybq4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Viktor Talashuk](https://unsplash.com/@viktortalashuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/BTTO404UHzA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Sviatoslav Huzii](https://unsplash.com/@sviathuzii?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/I497Uc8xWXQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Camila Aramayo](https://unsplash.com/@camilaramayo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/lFo7eFwr8Fs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Drahomír Posteby-Mach](https://unsplash.com/ko/@postebymach?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/9Jl9Wk9juuE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Terra Slaybaugh](https://unsplash.com/it/@terras?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/abSGJhSzRMI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Olesia Buyar](https://unsplash.com/@olesichka?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/Ae2ZA7ocNT0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Annie Spratt](https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/8ULwUsmbA-E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Art Rachen](https://unsplash.com/es/@artrachen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/8SGKhWXzlKQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Kim Daniels](https://unsplash.com/@kimbroughdaniels?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/BArWcH78kQ0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Yulia Khlebnikova](https://unsplash.com/@khlebnikovayulia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") on [Unsplash](https://unsplash.com/fr/photos/o_O75f28GiA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Jakub Kapusnak](https://unsplash.com/@foodiesfeed?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/Hj53USePB1E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Markus Spiske](https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/oQrsENGZXDU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Gérôme Bruneau](https://unsplash.com/@geromebruneau?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/RPmWEtZLh7U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Łukasz Rawa](https://unsplash.com/de/@lukasz_rawa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/NDro8tjU4e0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Markus Spiske](https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/4PG6wLlVag4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Shelley Pauls](https://unsplash.com/fr/@shelleypauls?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/t4X660oKiYs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [David Gabrielyan](https://unsplash.com/@david_gabriel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/ecpymDlXwHE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [engin akyurt](https://unsplash.com/@enginakyurt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/DPB7dwhnV5I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Chandan Chaurasia](https://unsplash.com/@chaurasia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/J5KMugvdP44?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Łukasz Rawa](https://unsplash.com/de/@lukasz_rawa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/HoEYJxkVJk8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- Photo by [Thomas Gamstaetter](https://unsplash.com/@thomasgamstaetter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/fr/photos/IFGVE61AAno?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+- [No Save Icon Format](https://www.freeiconspng.com/img/23494) on [Free icons png](https://www.freeiconspng.com)  
+
+
+  
