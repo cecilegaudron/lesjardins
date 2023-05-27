@@ -45,7 +45,21 @@ User Stories represent the various steps and tasks to be carried out to ensure t
 ### Wireframes  
 Models are available on this website. They are uncluttered, UX design oriented, in order to offer the user the simplest possible shopping experience. I don't want to add superfluous design or images that don't make sense with the products sold. The site must remain as sober and simple as possible. 
 
-TO COMPLETED
+-__Mobile Mockups__  
+
+![MOBILE MOCKUP 1](/media/screenshots/mobile-mockups.jpg)  
+
+![MOBILE MOCKUP 2](/media/screenshots/mobile-mockups2.jpg)    
+
+![MOBILE MOCKUP 3](/media/screenshots/mobile-mockups3.jpg)  
+
+-__Desk Mockups__  
+
+![DESK MOCKUP 1](/media/screenshots/desk-mockups.jpg)  
+
+![DESK MOCKUP 2](/media/screenshots/desk-mockups2.jpg)  
+
+![DESK MOCKUP 3](/media/screenshots/desk-mockups3.jpg)  
 
 ### Logo  
 The logo is created by myself. It represents the activity of the producers, their link with agriculture. The green color is a reminder of nature and the products of the earth.  
@@ -94,11 +108,11 @@ Here are the keywords and phrases that relate to the site's activity as well as 
 | Restaurants | Fruits |  Environment |
 | Firms | Transform products |  Healthy |
 | Families | Transform products |  Farm |
-|  |  |  Ecology |
+| Un Endroit |  |  Ecology |
 
--__Long_tail keywords__  
+-__Long-tail keywords__  
 - How to shop locally
-- How to buy fruits and vegetables locally
+- How to buy local fruits and vegetables
 - How to take control of your health
 - How to subscribe to vegetable baskets near me
 - Finance a local producer
@@ -106,7 +120,8 @@ Here are the keywords and phrases that relate to the site's activity as well as 
 
 ### Facebook  
 Facebook would serve both as a business card that users can share with friends, a means of informing about new products on sale or events organized at the farm. Customers can also leave reviews to judge their shopping experience.  
-TO BE COMPLETED AVEC FB SCREENSHOT
+
+![FACEBOOK MOCKUP](/media/screenshots/facebook-mockup.jpg)  
 
 ### GDR  
 Concerning the General Data Protection Regulation, I have generated the privacy policy with this [Privacy Policy Generator](https://www.privacypolicygenerator.info).  
