@@ -136,6 +136,9 @@ The [link](https://www.privacypolicygenerator.info/live.php?token=5wXhzvlMcnTpFj
 [Go back to the Table of content](#table-of-content)  
 
 ## Development  
+
+I use the Boutique Ado project from Code Institute like a boilerplate.  
+
 The organization of the website is very simple. It is composed of several content pages, accessible to all:  
 - Home page  
 - Products  
@@ -466,6 +469,7 @@ The wireframes were made with InDesign software. This is not the software common
 
 ## Credits
 - I use this [video](https://www.youtube.com/watch?v=GdrbE-s5DgQ) to help me with the responsive nav bar.
+- I use the Boutique Ado project from Code Institute as a boilerplate for all the products display, the order, the shopping bag, the order and the stripe paiement.  
 
 ### Thank you  
 - A special thank you to my mentor Rory Patrick Sheridan who helped me a lot to understand my problems, who encourages me and gives me good advice throughout the project.  
