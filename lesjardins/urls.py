@@ -14,6 +14,7 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('contact/', include('contact.urls')),
     path('newsletter/', include('newsletter.urls')),
+    path('survey/', include('survey.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = "lesjardins.views.handler404"
