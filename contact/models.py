@@ -22,7 +22,7 @@ class Contact(models.Model):
     )
     message = models.TextField(
         "Your message*",
-        max_length=254,
+        max_length=4000
     )
     created_on = models.DateField(
         auto_now_add=True
