@@ -22,11 +22,11 @@ class Contact(models.Model):
     )
     message = models.TextField(
         "Your message*",
-        max_length=10,
+        max_length=254,
     )
-    created_on = models.DateTimeField(
+    created_on = models.DateField(
         auto_now_add=True
     )
 
     def __str__(self):
-        return self.name
+        return f'Message from "{self.message_name}" on {self.created_on}'
