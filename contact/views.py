@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
 from .forms import ContactForm
 from .models import Contact
 
@@ -11,7 +12,7 @@ def contact(request):
         if form.is_valid():
             form.save()
             form = ContactForm()
-            return HttpResponseRedirect('email-sent')
+            return HttpResponseRedirect('email-sent.html')
         else:
             form = ContactForm()
             return HttpResponseRedirect('contact')
@@ -20,4 +21,4 @@ def contact(request):
 
 
 def email_sent(request):
-    return render(request, 'contact/email_sent.html')
+    return render(request, 'contact/email-sent.html')
