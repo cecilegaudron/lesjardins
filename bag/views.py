@@ -9,6 +9,7 @@ def view_bag(request):
     """
     return render(request, 'bag/bag.html')
 
+
 def add_to_bag(request, item_id):
     """
     Basic view to add a quantity of the specified product to the shopping bag
