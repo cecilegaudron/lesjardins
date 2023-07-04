@@ -26,15 +26,16 @@
                 {% if favourites %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
-                            {% for favorite in favourites %}
+                            {% for favourite in favourites %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="">
+                                        <img class="img-fluid rounded" src="{{ favourite.favourite.image.url }}" alt="">
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ favourite.favourite }}</strong></p>
-                                        <p class="my-0"><strong>{{ item.favourite.name }}</strong></p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.favourite.sku|upper }}</p>
+                                        <p class="my-0"><strong>{{ favourite.favourite.name }}</strong></p>
+                                        <p class="my-0"><strong>{{ favourite.favourite.price }} €</strong></p>
+                                        <p class="my-0 small text-muted">Weight: {{ favourite.favourite.weight }}</p>
+                                        <p class="my-0 small text-muted">Price per kilo: {{ favourite.favourite.price_kilo }} €</p>
                                     </td>
                                 </tr>
                                 {% endfor %}
