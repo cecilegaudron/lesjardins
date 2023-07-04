@@ -23,7 +23,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <!-- If items are on the bad this block is displayed -->
+                <!-- If items are on the bag this block is displayed -->
                 {% if bag_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
@@ -87,7 +87,7 @@
                                     </td>
                                 </tr>
                                 {% endfor %}
-                                <!-- Using the total the delivery chagers and the grand_total as well as the free delivery_delta -->
+                                <!-- Using the total the delivery chargers and the grand_total as well as the free delivery_delta -->
                                 <tr>
                                     <td colspan="5" class="pt-5 text-right">
                                         <h6><strong>Bag Total: {{ total|floatformat:2 }} €</strong></h6>
