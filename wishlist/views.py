@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, reverse
+from django.shortcuts import render, reverse, get_object_or_404, HttpResponseRedirect, HttpResponse
 from django.contrib import messages
 from .models import Wishlist, Product
 
@@ -12,15 +12,35 @@ def favourite_list(request):
     favourite = Wishlist.objects.all()
 
     context = {
-        'favourites': favourite
+        'favourites': favourite,
+        'product': product,
+        'is_favourite': is_favourite,
     }
 
     return render(request, 'wishlist/wishlist.html', context)
 
 
+def favourite_product(request, item_id):
+    """ A view to show individual product details """
+
+    item = get_object_or_404(Product, pk=item_id)
+    is_favourite = False
+
+    if product.favourites.filter(id=request.user.id).exists():
+        is_favourite = True
+
+    context = {
+        'product': product,
+        'is_favourite': is_favourite,
+    }
+
+    return render(request, 'products/product_detail.html', context)
+
+
+# https://stackoverflow.com/questions/56580696/how-to-implement-add-to-wishlist-for-a-product-in-django
 def add_to_wishlist(request, item_id):
     """
-    Basic View for adding a product to the wishlist
+    Basic view to add a product to the wishlist
     """
     item = get_object_or_404(Product, pk=item_id)
 
@@ -29,6 +49,17 @@ def add_to_wishlist(request, item_id):
         favourite_id=item.id,
         user=request.user,
     )
-    messages.info(request, 'The item was added to your wishlist')
+    messages.success(request, 'The product was added to your wishlist')
     return HttpResponseRedirect(reverse('product_detail', args=[str(item_id)]))
 
+
+# https://stackoverflow.com/questions/63444550/how-to-delete-product-from-wishlist-in-django
+def remove_to_wishlist(request, item_id):
+    """
+    Basic view to remove a product from the wishlist
+    """
+    Wishlist.objects.filter(
+        user=request.user,
+        favourite=Product.objects.get(pk=item_id)).delete()
+    messages.success(request, 'The product was removed from your wishlist')
+    return HttpResponseRedirect(reverse('product_detail', args=[str(item_id)]))
