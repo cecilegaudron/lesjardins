@@ -1,172 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@400;500&display=swap');
-
-* {
-    box-sizing: border-box;
-}
-
-header {
-    position: relative;
-    padding: 0 2rem;
-}
-
 .navbar {
-    height: max-content;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1548;
-}
-
-.navbar .links, 
-.navbar .shopping {
-    display: flex;
-    gap: 2rem;
-}
-
-.navbar .toggle_btn {
-    color: #000;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
+    /*background-color: #65009C;*/
+    background-color: #B6C47F;
 }
 
 li {
-    list-style: none;
+    list-style-type: none;
 }
 
-.products_menu {
-    font-family: 'Fjalla One', Arial, sans-serif;
-    font-size: 1.8rem;
+a {
+    text-decoration: none;
     text-transform: uppercase;
     color: #000;
-}
-
-.products_menu:hover {
-    text-decoration: none;
-    color: #65009C;
-}
-
-.menu_icon,
-.shopping_icon {
-    color: #B6C47F !important;
-}
-
-.shopping_icon:hover,
-.menu_icon:hover {
-    color: #65009C;
-}
-
-.shopping_txt,
-.shopping_txt:active {
     font-family: 'Fjalla One', Arial, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+}
+
+a:hover,
+a:active {
     text-decoration: none;
+    color: #FFF;
+}
+
+p {
+    color: #FFF;
+}
+
+.fixed-menu {
+    padding-right: 10%;
+}
+
+#bars {
     color: #000;
 }
 
-.shopping_txt:hover {
-    color: #65009C;
+#bars:hover {
+    color: #FFF;
 }
 
-.shopping-content {
-    font-size: 1.4rem;
-    padding: 2% !important;
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-/* Dropdown menu */
-.dropdown_menu {
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top: 50%;
-    height: 0;
-    width: 80%;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: #fffafa;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 99999;
-}
-
-.dropdown_menu li {
-    padding: 0.7rem;
-    margin: 1rem;
-    display: flex;
-    justify-content: left;
-}
-
-.dropdown_menu.open {
-    height: fit-content;
-    width: 85%;
-}
-
-/* Dropdown menu for account */
-.dropdown-menu {
-    background-color: #fffafa;
-    width: fit-content;
-    height: fit-content;
-    z-index: 99999;
-    padding: 1% !important;
-}
-
-/* Media Queries */
-@media (min-width: 992px) {
-    .navbar {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-    }
-
-    .navbar .links,
-    .navbar .shopping {
-        gap: 1rem;
-    }
-
-    .header-container {
-        padding-top: 14%;
-    }
-
-    .products_menu {
-        font-size: 1.5rem;
-    }
-
-    .shopping_txt {
-        font-size: 1.3rem;
-    }
-}
-
-/* Media Queries for menu */
-@media (max-width: 576px) {
-    .dropdown_menu {
-        left: 2rem;
-        /*width: unset;*/
-    }
-}
-
-@media (max-width: 768px) {
-    .dropdown_menu {
-        top: 4rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .navbar .links,
-    .navbar .shopping {
-        display: none;
-    }
-
-    .navbar .toggle_btn {
-        display: block;
-    }
-
-    .dropdown_menu {
-        display: block;
-    }
-
-    .header-container {
-        padding-top: 13%;
-    }
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.content {
+    padding-top: 60px;
 }

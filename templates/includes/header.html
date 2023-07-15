@@ -8,55 +8,134 @@
   <!-- Logo -->
   <div class="w-100">
     <a href="{% url 'home' %}">
-      <img class="img-fluid logo p-2 col-4" alt="Les Jardins logo"
+      <img class="img-fluid logo p-2 col-3 col-md-2" alt="Les Jardins logo"
         src="https://res.cloudinary.com/dcymco5tc/image/upload/v1685196376/media/logo-lesjardins_uig9io.webp">
     </a>
   </div>
-  <div>
-    <nav class="navbar navbar-dark sticky-top">
-      <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <nav class="navbar navbar-dark sticky-top" id="menu">
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <i class="fa-solid fa-bars-staggered" id="bars"></i>
+    </button>
     <!-- Fixed navbar -->
-      <a href="#">PRODUCTS</a>
-      <a href="#">ACCOUNT</a>
-      <a href="#">SHOPPING BAG</a>
-
-      <!-- Navbar links -->
+    <div class="col-9 text-right p-1">
+    <a href="{% url 'products' %}" class="fixed-menu">SHOP</a>
+    <!-- Account icon -->
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'profile' %}" class="fixed-menu">
+      <i class="fas fa-user fa-lg shopping_icon"></i>
+      {% else %}
+      <a href="{% url 'account_login' %}">
+        <i class="fas fa-user fa-lg shopping_icon"></i>
+        {% endif %}
+      </a>
+      <!-- Shopping Bag -->
+      <a class="{% if grand_total %}{% else %}text-black{% endif %}" href="{% url 'view_bag' %}">
+        <i class="fa-solid fa-basket-shopping"></i>
+        {% if grand_total %}
+        {{ grand_total|floatformat:2 }} €
+        {% else %}
+        0.00 €
+        {% endif %}
+      </a>
+    </div>
+      <!-- Navbar links in collapse menu -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">VEGETABLES</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">FRUITS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">OTHER PRODUCTS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">ALL PRODUCTS</a>
-          </li>
-          <hr>
+        <ul>
           <li>
-            ACCOUNT
+            <a href="{% url 'products' %}?category=vegetables,herbs" class="dropdown-item">Vegetables
+              <i class="fa-solid fa-carrot menu_icon"></i></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">LOG IN</a>
+          <li>
+            <a href="{% url 'products' %}?category=fruits" class="dropdown-item">Fruits
+              <i class="fa-solid fa-apple-whole menu_icon"></i></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">REGISTER</a>
+          <li>
+            <a href="{% url 'products' %}?category=grocery,dry_vegetables,plants_seeds" class="dropdown-item">Other
+              Products
+              <i class="fa-solid fa-jar menu_icon"></i></a>
           </li>
-          <hr>
+        </ul>
+        <hr>
+        {% if request.user.is_authenticated %}
+        <p>Connected as <strong>{{ user.username }}</strong>
+          <i class="fas fa-user fa-lg shopping_icon"></i>
+        </p>
+        {% if request.user.is_superuser %}
+        <ul>
+          <li>
+            <a href="{% url 'add_product' %}" class="dropdown-item">
+              Product Management <i class="fa-solid fa-plus-minus"></i>
+            </a>
+          </li>
+          {% endif %}
+          <li>
+            <a href="{% url 'profile' %}" class="dropdown-item">
+              My Profile <i class="fa-solid fa-address-card"></i>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'profile' %}" class="dropdown-item">
+              My orders <i class="fa-solid fa-box-open"></i>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'wishlist' %}" class="dropdown-item">
+              My Wishlist <i class="fa-solid fa-heart"></i>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">
+              Logout <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+          </li>
+        </ul>
+        {% else %}
+        <p>
+          <i class="fas fa-user fa-lg shopping_icon"></i>Account</p>
+        <ul>
+          <li>
+            <a href="{% url 'account_signup' %}" class="dropdown-item">
+              Register <i class="fa-solid fa-pen-to-square"></i></a>
+          </li>
+          <li>
+            <a href="{% url 'account_login' %}" class="dropdown-item">
+              Login <i class="fa-solid fa-right-to-bracket"></i>
+            </a>
+          </li>
+        </ul>
+        {% endif %}
+        <hr>
+        <ul>
           <li class="nav-item">
-            <a class="nav-link" href="#">CONTACT</a>
+            <a href="{% url 'contact' %}" class="dropdown-item">
+              Contact <i class="fa-solid fa-envelope"></i></a>
           </li>
         </ul>
       </div>
-    </nav>
+  </nav>
 </header>
 
 {% block postloadjs %}
+<!-- script for sticky bar -->
+<!-- https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
 
+// Get the navbar
+var navbar = document.getElementById("menu");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 {% endblock %}
