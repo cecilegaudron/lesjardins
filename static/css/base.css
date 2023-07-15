@@ -48,12 +48,14 @@ footer {
 
 .title-footer {
     font-family: 'Fjalla One', Arial, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
 }
 
 footer a {
     color: #FFF;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 footer a:hover {
@@ -63,7 +65,11 @@ footer a:hover {
 
 /* Home page */
 .hp-punchline {
-    background-color: #B6C47F;
+    border: #B6C47F;
+}
+
+.hp-punchline h2 {
+    color: #65009C;
 }
 
 .home-picture {
@@ -72,12 +78,14 @@ footer a:hover {
 
 article a,
 article a:active {
-    color: #65009C;
+    color: #333333;
     text-decoration: underline;
+    text-transform: none;
+    font-size: 1.1rem;
 }
 
 article a:hover {
-    color: #333333;
+    color: #65009C;
 }
 
 /* Buttons */
