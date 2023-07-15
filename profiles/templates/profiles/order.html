@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="title m-4 text-center">My Orders</h2>
+                <div class="text-center">
+                    <a href="{% url 'profile' %}" class="btn btn-success text-uppercase">
+                        My Profile
+                    </a>
+                    <a href="{% url 'wishlist' %}" class="btn btn-success text-uppercase">
+                        My Wishlist
+                    </a>
+                    <a href="{% url 'account_logout' %}" class="btn btn-success text-uppercase">
+                        Log Out
+                    </a>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 col-lg-6 mx-auto">
+            <p class="text-muted">Order History</p>
+            <div class="order-history table-reponsive">
+                {% if orders %}
+                <table class="table table-sm table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Order Number</th>
+                            <th>Date</th>
+                            <th>Items</th>
+                            <th>Order Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'order_history' order.order_number %}"
+                                title="{{ order.order_number }}">
+                                    {{ order.order_number|truncatechars:6 }}
+                                </a>
+                            </td>
+                            <td>{{ order.date }}</td>
+                            <td>
+                                <ul class="list-unstyled">
+                                    {% for item in order.lineitems.all %}
+                                        <li class="small"></li>
+                                            {{ item.product.name }} ({{ item.product.weight }} gr) X{{ item.quantity }}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>{{ order.grand_total }} €</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <p class="text-black">You have not yet placed an order</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
