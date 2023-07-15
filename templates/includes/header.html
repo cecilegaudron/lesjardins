@@ -5,139 +5,58 @@
 {% endblock %}
 
 <header>
-    <!-- Responsive navbar code from the video https://www.youtube.com/watch?v=GdrbE-s5DgQ -->
-    <div class="container navbar w-100 bg-white">
-        <div class="row col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="{% url 'home' %}">
-                <img class="img-fluid logo plg-2 w-100" alt="Les Jardins logo"
-                    src="https://res.cloudinary.com/dcymco5tc/image/upload/v1685196376/media/logo-lesjardins_uig9io.webp">
-            </a>
-        </div>
-        <!-- Products menu -->
-        <div class="row col-lg-6 col-xl-7" >
-            <ul class="links">
-                <li>
-                    <a href="{% url 'products' %}?category=vegetables,herbs" class="products_menu">Vegetables
-                        <i class="fa-solid fa-carrot menu_icon"></i></a>
-                </li>
-                <li>
-                    <a href="{% url 'products' %}?category=fruits" class="products_menu">Fruits
-                        <i class="fa-solid fa-apple-whole menu_icon"></i></a>
-                </li>
-                <li>
-                    <a href="{% url 'products' %}?category=grocery,dry_vegetables,plants_seeds"
-                        class="products_menu">Other Products
-                        <i class="fa-solid fa-jar menu_icon"></i></a>
-                </li>
-            </ul>
-        </div>
-        <!-- Account and shopping bag -->
-        <div class="shopping row col-lg-3">
-            <a class="nav-link d-block dropdown shopping_txt txt-right" href="#" 
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user fa-lg shopping_icon"></i> Account
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                {% endif %}
-                <a href="" class="dropdown-item">My Profile</a>
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                {% endif %}
-            </div>
-            <!-- Shopping Bag -->
-            <a class="{% if grand_total %}{% else %}text-black{% endif %} nav-link d-block shopping_txt"
-                href="{% url 'view_bag' %}">
-                <i class="fa-solid fa-basket-shopping shopping_icon"></i>
-                {% if grand_total %}
-                {{ grand_total|floatformat:2 }} €
-                {% else %}
-                0.00 €
-                {% endif %}
-            </a>
-        </div>
-        <!-- Hamburger menu icon -->
-        <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </div>
-    <!-- Responsive menu -->
-    <div class="dropdown_menu">
-        <li>
-            <a href="{% url 'products' %}?category=vegetables,herbs" class="products_menu">Vegetables
-                <i class="fa-solid fa-carrot menu_icon"></i></a>
-        </li>
-        <li>
-            <a href="{% url 'products' %}?category=fruits" class="products_menu">Fruits
-                <i class="fa-solid fa-apple-whole menu_icon"></i></a>
-        </li>
-        <li>
-            <a href="{% url 'products' %}?grocery,dry_vegetables,plants_seeds" class="products_menu">Other Products
-                <i class="fa-solid fa-jar menu_icon"></i></a>
-        </li>
-        <hr class="w-80">
-        <li class="shopping-content">
-            <a class="{% if grand_total %}{% else %}text-black{% endif %} nav-link d-block d-lg-none shopping_txt"
-                href="{% url 'view_bag' %}">
-                <i class="fa-solid fa-basket-shopping shopping_icon"></i>
-                {% if grand_total %}
-                {{ grand_total|floatformat:2 }} €
-                {% else %}
-                0.00 €
-                {% endif %}
-            </a>
-        </li>
-        <!-- Split dropright button -->
-        <li class="shopping-content">
-            <div class="btn-group dropright">
-                <a class="nav-link d-block d-lg-none dropright shopping_txt" href="#"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user fa-lg shopping_icon"></i> Account
-                </a>
-                <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <span class="sr-only">Toggle Dropright</span>
-                </button>
-                <div class="dropdown-menu">
-                    <!-- Dropdown menu links -->
-                    {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                    {% endif %}
-                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                    {% else %}
-                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                    {% endif %}
-                </div>
-            </div>
-        </li>
-        <li class="shopping-content">
-            <a href="{% url 'contact' %}" class="shopping_txt">
-                Contact us
-            </a>
-        </li>
-    </div>
+  <!-- Logo -->
+  <div class="w-100">
+    <a href="{% url 'home' %}">
+      <img class="img-fluid logo p-2 col-4" alt="Les Jardins logo"
+        src="https://res.cloudinary.com/dcymco5tc/image/upload/v1685196376/media/logo-lesjardins_uig9io.webp">
+    </a>
+  </div>
+  <div>
+    <nav class="navbar navbar-dark sticky-top">
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <!-- Fixed navbar -->
+      <a href="#">PRODUCTS</a>
+      <a href="#">ACCOUNT</a>
+      <a href="#">SHOPPING BAG</a>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">VEGETABLES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FRUITS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">OTHER PRODUCTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ALL PRODUCTS</a>
+          </li>
+          <hr>
+          <li>
+            ACCOUNT
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LOG IN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">REGISTER</a>
+          </li>
+          <hr>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 </header>
 
 {% block postloadjs %}
-<script>
-    const toggleBtn = document.querySelector('.toggle_btn')
-    const toggleBtnIcon = document.querySelector('.toggle_btn i')
-    const dropDownMenu = document.querySelector('.dropdown_menu')
 
-    toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle('open')
-        const isOpen = dropDownMenu.classList.contains('open')
-
-        toggleBtnIcon.classList = isOpen ?
-            'fa-solid fa-xmark' :
-            'fa-solid fa-bars'
-    }
-</script>
 {% endblock %}
