@@ -58,7 +58,7 @@
         </ul>
         <hr>
         {% if request.user.is_authenticated %}
-        <p>Connected as <strong>{{ user.username }}</strong>
+        <p class="account">Connected as <em>{{ user.username }}</em>
           <i class="fas fa-user fa-lg shopping_icon"></i>
         </p>
         {% if request.user.is_superuser %}
@@ -75,7 +75,7 @@
             </a>
           </li>
           <li>
-            <a href="{% url 'profile' %}" class="dropdown-item">
+            <a href="{% url 'order' %}" class="dropdown-item">
               My orders <i class="fa-solid fa-box-open"></i>
             </a>
           </li>
@@ -91,8 +91,7 @@
           </li>
         </ul>
         {% else %}
-        <p>
-          <i class="fas fa-user fa-lg shopping_icon"></i>Account</p>
+        <p class="text-uppercase title fs-1">Account</p>
         <ul>
           <li>
             <a href="{% url 'account_signup' %}" class="dropdown-item">

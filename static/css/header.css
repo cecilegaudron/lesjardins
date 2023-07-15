@@ -25,6 +25,14 @@ p {
     color: #FFF;
 }
 
+.account {
+    color: #FFF;
+}
+
+.dropdown-item {
+    padding: 0;
+}
+
 .fixed-menu {
     padding-right: 10%;
 }

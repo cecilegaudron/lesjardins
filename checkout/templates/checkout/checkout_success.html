@@ -22,8 +22,9 @@
                 <hr>
                 <h2 class="logo-font mb-4">Thank you for your order</h2>
                 <hr>
-                <p class="text-black">A confirmation email will be sent to <strong>{{ order.email }}.</strong><br>
-                    Click on the button to see the details of the order</p>
+                <p class="text-black">
+                    A confirmation email will be sent to <strong>{{ order.email }}.</strong>
+                </p>
             </div>
         </div>
         <!-- Order summary -->
@@ -60,7 +61,7 @@
                     <div class="row">
                         <div class="col">
                             <h3 class="order-title">Delivering to:</h3>
-                            <p class="mb-0">{{ order.full_name }}<br>
+                            <p class="mb-0 text-black">{{ order.full_name }}<br>
                                 {{ order.street_address1 }}
                                 {% if order.street_address2 %}
                                     {{ order.street_address2 }}
