@@ -37,6 +37,10 @@ strong {
     font-weight: bolder;
 }
 
+p {
+    color: #000;
+}
+
 /* Footer */
 footer {
     background-color: #B6C47F;
@@ -170,6 +174,7 @@ center and keep font awesome style consistent */
 .product_name {
     font-size: 1.4rem;
     font-weight: bolder;
+    color: #000;
 }
 
 /* User messages */
