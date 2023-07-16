@@ -12,65 +12,66 @@
 
 {% block content %}
 <section>
-    <div class="container home-picture col-12 col-md-10 col-xl-8 mx-auto">
-        <img src="https://res.cloudinary.com/dcymco5tc/image/upload/v1681313815/media/hp-vegetables_v7xyd1.webp"
-            alt="Fresh vegetables on the table" class="w-100">
-    </div>
     <div class="container mx-auto">
+        <div class="mx-auto col-12">
+            <h1 class="text-uppercase title">Fresh Fruit & Vegetables</h1>
+        </div>
+        <div class="home-picture col-12 col-md-10 col-xl-8 mx-auto">
+            <img src="https://res.cloudinary.com/dcymco5tc/image/upload/v1681313815/media/hp-vegetables_v7xyd1.webp"
+                alt="Fresh vegetables on the table" class="w-100 mb-4">
+            <div class="border border-6 hp-punchline mx-auto pt-3 pb-3 col-md-8">
+                <h2 class="text-uppercase text-center">
+                    Eat better, eat local !
+                </h2>
+                <div>
+                    <h4 class="text-center">
+                        <a href="{% url 'products' %}"
+                            class="shop-now-button btn btn-lg rounded-0 text-uppercase title">See the
+                            products</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+</section>
+<section>
+    <div class="container mx-auto mt-4">
         <div>
-            <h2 class="text-uppercase title text-center my-4">Why buy vegetables and fruits from us ?</h2>
+            <h2 class="text-uppercase title text-center">Why buy vegetables and fruits from us ?</h2>
         </div>
         <div class="row">
-            <div class="col-md-6 my-4">
-                <h3 class="text-uppercase title text-center">Fresh products guaranteed 
+            <div class="col-md-5 hp-cases">
+                <h3 class="text-uppercase title text-center">Fresh products guaranteed
                     <i class="fa-solid fa-snowflake"></i>
                 </h3>
-                <p class="text-black">The products are picked up according to the orders, day by day, which <strong>assures you to
+                <p class="text-black">The products are picked up according to the orders, day by day, which
+                    <strong>assures you to
                         have the freshest quality</strong> possible.</p>
             </div>
-            <div class="col-md-6 my-4">
+            <div class="col-md-5 hp-cases">
                 <h3 class="text-uppercase title text-center">Top Quality <i class="fa-solid fa-heart"></i></h3>
-                <p class="text-black">Quality is <strong>our priority</strong>. We take care of our land, our plants and therefore
+                <p class="text-black">Quality is <strong>our priority</strong>. We take care of our land, our plants
+                    and therefore
                     the products that will be in your plate</p>
             </div>
-            <div class="col-md-6 my-4">
+            <div class="col-md-5 hp-cases">
                 <h3 class="text-uppercase title text-center">Finance a local producer <i
                         class="fa-solid fa-piggy-bank"></i>
                 </h3>
-                <p class="text-black">Buying from local producers allows us to <strong>support sustainable agriculture</strong> and
+                <p class="text-black">Buying from local producers allows us to <strong>support sustainable
+                        agriculture</strong> and
                     to allow a family to live from its work</p>
             </div>
-            <div class="col-md-6 my-4">
+            <div class="col-md-5 hp-cases">
                 <h3 class="text-uppercase title text-center">Know what you're eating <i
                         class="fa-solid fa-circle-info"></i>
                 </h3>
-                <p class="text-black">We are able to give you the <strong>traceability of each product</strong>. And to see it with
+                <p class="text-black">We are able to give you the <strong>traceability of each product</strong>. And
+                    to see it with
                     your own eyes, you are welcome to visit the farm to know where your fruits and vegetables
                     grow</p>
             </div>
         </div>
     </div>
-</section>
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="container my-4 col-10 border border-4 hp-punchline">
-                <div class="row">
-                    <div class="my-4 mx-auto">
-                        <h2 class="text-uppercase text-center">
-                            Eat better, eat local !
-                        </h2>
-                        <div class="my-4 col-12">
-                            <h4 class="text-center">
-                                <a href="{% url 'products' %}"
-                                    class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3 title">See the
-                                    products</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 </section>
 <article>
     <div class="container p-4 mx-auto col-lg-8 col-xl-6">
@@ -86,7 +87,8 @@
                 people</strong>.</p>
         <br>
         <h3 class="text-uppercase title">Taking care of your health with food</h3>
-        <p class="text-black">Hippocrates, the ancient Greek physician, said "<strong>Let your food be your first medicine</strong>". We
+        <p class="text-black">Hippocrates, the ancient Greek physician, said "<strong>Let your food be your first
+                medicine</strong>". We
             have lost the
             taste for food and are feeding our bodies with empty nutrients. The <a
                 href="https://www.who.int/health-topics/nutrition#tab=tab_1" target="_blank"
@@ -96,7 +98,8 @@
                 every meal and fruit every day!</strong></p>
         <br>
         <h3 class="text-uppercase title">Treat yourself to healthy foods</h3>
-        <p class="text-black">No, vegetables are not boring! They can be <strong>so tasty and full of flavor</strong>. World renowned chefs
+        <p class="text-black">No, vegetables are not boring! They can be <strong>so tasty and full of flavor</strong>.
+            World renowned chefs
             <a href="https://www.jamieoliver.com/recipes/category/special-diets/vegetarian/" target="_blank"
                 title="This is the Jamie Oliver's vegetarian recipes">Jamie
                 Olivier</a> and <a href="https://ottolenghi.co.uk/recipes/vegetarian-recipes" target="_blank"
@@ -105,18 +108,31 @@
                 and spices</strong> for the benefit of your family and your health!</p>
         </p>
     </div>
-    <div class="my-4 col-12">
-        <h4 class="text-center">
-            <a href="{% url 'survey' %}"
-                class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3 title">Answer a few questions</a>
-        </h4>
-    </div>
-    <div class="container home-picture col-12 col-md-10 col-xl-8 mx-auto">
-        <img src="https://res.cloudinary.com/dcymco5tc/image/upload/v1684912989/media/carotts-bag_crctdo.webp"
-            alt="Bag with fresh carrots" class="w-100">
-    </div>
 </article>
-</div>
+<section>
+    <div class="container mx-auto">
+        <div class="row">
+            <div class="col-12 col-md-6 home-picture mb-4">
+                <img src="https://res.cloudinary.com/dcymco5tc/image/upload/v1684912989/media/carotts-bag_crctdo.webp"
+                    alt="Bag with fresh carrots" class="w-100">
+            </div>
+            <div class="col-12 col-md-6">
+                <h2 class="text-center title text-uppercase">Your opinion is important to us</h2>
+                <p class="text-black">
+                    We would like to know what you think of our offer! <br><br>
+                    Why you buy or plan to buy our products, what is your purpose, who are you? <br><br>
+                    By answering a few questions, we'll get to know you better and be able to adapt our offer to your needs.
+                </p>
+                <div class="text-center">
+                    <a href="{% url 'survey' %}" class="btn btn-green rounded-0 text-uppercase py-3 title">
+                        Answer a few questions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!-- File with newsletter subscription -->
 {% include 'includes/newsletter.html' %}

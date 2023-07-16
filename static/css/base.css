@@ -18,6 +18,8 @@ body {
 h1 {
     font-family: 'Fjalla One', Arial, sans-serif;
     font-size: 2.6rem;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
 }
 
 h2 {
@@ -66,10 +68,17 @@ footer a:hover {
 /* Home page */
 .hp-punchline {
     border: #B6C47F;
+    background-color: #65009C;
 }
 
 .hp-punchline h2 {
-    color: #65009C;
+    color: #FFF;
+}
+
+.hp-cases {
+    background-color: #B6C47F;
+    padding: 1rem;
+    margin: 1rem 1rem 1rem 2rem;
 }
 
 .home-picture {
