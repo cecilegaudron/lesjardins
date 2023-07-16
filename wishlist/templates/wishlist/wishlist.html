@@ -39,13 +39,18 @@
                             {% for favourite in favourites %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ favourite.favourite.image.url }}" alt="">
+                                        <img class="img-fluid rounded" src="{{ favourite.favourite.image.url }}" alt="{{ product.name }}">
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ favourite.favourite.name }}</strong></p>
-                                        <p class="my-0"><strong>{{ favourite.favourite.price }} €</strong></p>
+                                        <p class="my-0 text-black"><strong>{{ favourite.favourite.name }}</strong></p>
+                                        <p class="my-0 text-black"><strong>{{ favourite.favourite.price }} €</strong></p>
                                         <p class="my-0 small text-muted">Weight: {{ favourite.favourite.weight }}</p>
                                         <p class="my-0 small text-muted">Price per kilo: {{ favourite.favourite.price_kilo }} €</p>
+                                        <!-- Button for removing from the wishlist-->
+                                        <a href="{% url 'remove_to_wishlist' %}" type="button"
+                                            class="increment-qty btn btn-green rounded-0">
+                                            <i class="fa-solid fa-heart"></i> Dislike
+                                        </a>
                                     </td>
                                 </tr>
                                 {% endfor %}

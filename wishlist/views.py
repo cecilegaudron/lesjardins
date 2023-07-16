@@ -10,11 +10,8 @@ def favourite_list(request):
     """
     user = request.user
     favourite = Wishlist.objects.all()
-
     context = {
-        'favourites': favourite,
-        'product': product,
-        'is_favourite': is_favourite,
+        'favourites': favourite
     }
 
     return render(request, 'wishlist/wishlist.html', context)

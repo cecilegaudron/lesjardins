@@ -50,17 +50,15 @@
                 <!-- Button for wishlist -->
                 <span class="w-20 text-right">
                     <!-- Button for adding to the wishlist-->
-                    <a href="{% url 'add_to_wishlist' product.pk %}" type="button"
-                        class="increment-qty btn btn-green rounded-0">
+                    <a href="{% url 'add_to_wishlist' product.pk %}" type="button" class="btn btn-green rounded-0">
                         <i class="fa-regular fa-heart"></i> Add to wishlist
                     </a>
                 </span>
                 <span class="w-20 text-right">
                     <!-- Button for removing from the wishlist-->
-                    <a href="{% url 'remove_to_wishlist' product.pk %}" type="button"
-                        class="increment-qty btn btn-green rounded-0">
-                        <i class="fa-solid fa-heart"></i> Dislike
-                    </a>
+                    <a href="{% url 'remove_to_wishlist' product.pk %}" type="button" class="btn btn-green rounded-0">
+                        <i class="fa-solid fa-heart"></i> Dislike this product
+                </a>
                 </span>
                 <!-- For quantity and add to shopping bag -->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
