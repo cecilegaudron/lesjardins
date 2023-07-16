@@ -185,6 +185,15 @@ center and keep font awesome style consistent */
     color: #000;
 }
 
+.ariane-link, .ariane {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.ariane-link:hover {
+    color: #65009C;
+}
+
 /* User messages */
 .message-container {
     position: fixed;
