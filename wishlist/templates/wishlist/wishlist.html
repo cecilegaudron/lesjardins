@@ -46,11 +46,6 @@
                                         <p class="my-0 text-black"><strong>{{ favourite.favourite.price }} €</strong></p>
                                         <p class="my-0 small text-muted">Weight: {{ favourite.favourite.weight }}</p>
                                         <p class="my-0 small text-muted">Price per kilo: {{ favourite.favourite.price_kilo }} €</p>
-                                        <!-- Button for removing from the wishlist-->
-                                        <a href="{% url 'remove_to_wishlist' %}" type="button"
-                                            class="increment-qty btn btn-green rounded-0">
-                                            <i class="fa-solid fa-heart"></i> Dislike
-                                        </a>
                                     </td>
                                 </tr>
                                 {% endfor %}
