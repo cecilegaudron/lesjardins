@@ -39,8 +39,10 @@
                             {% for favourite in favourites %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ favourite.favourite.image.url }}" alt="{{ product.name }}">
-                                    </td>
+                                        <a href="{% url 'product_detail' favourite.favourite.pk %}">
+                                            <img class="img-fluid rounded" src="{{ favourite.favourite.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        </td>
                                     <td class="py-3">
                                         <p class="my-0 text-black"><strong>{{ favourite.favourite.name }}</strong></p>
                                         <p class="my-0 text-black"><strong>{{ favourite.favourite.price }} €</strong></p>

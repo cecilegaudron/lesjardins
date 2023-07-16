@@ -58,7 +58,7 @@
                     <!-- Button for removing from the wishlist-->
                     <a href="{% url 'remove_to_wishlist' product.pk %}" type="button" class="btn btn-green rounded-0">
                         <i class="fa-solid fa-heart"></i> Dislike this product
-                </a>
+                    </a>
                 </span>
                 <!-- For quantity and add to shopping bag -->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
