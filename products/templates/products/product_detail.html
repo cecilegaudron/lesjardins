@@ -17,8 +17,8 @@
     <!-- Breadcrumb / Fil Arianne -->
     <div>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="breadcrumb bg-white">
-              <a href="{% url 'products' %}" class="breadcrumb-item ariane-link">Products</a>
-              <a href="{% url 'products' %}?category={{ product.category.name }}" class="breadcrumb-item ariane-link">{{ product.category.friendly_name }}</a>
+              <a href="{% url 'products' %}" class="breadcrumb-item">Products</a>
+              <a href="{% url 'products' %}?category={{ product.category.name }}" class="breadcrumb-item">{{ product.category.friendly_name }}</a>
               <a href="#" class="breadcrumb-item active ariane" aria-current="page">{{ product.name }}</a>
           </nav>
     </div>

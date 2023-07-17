@@ -19,7 +19,7 @@
     <div>
         {% if current_categories %}
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="breadcrumb bg-white">
-                <a href="{% url 'products' %}" class="breadcrumb-item ariane-link">Products</a>
+                <a href="{% url 'products' %}" class="breadcrumb-item">Products</a>
                 {% for c in current_categories %} 
                     <a href="#" class="breadcrumb-item active ariane" aria-current="page">{{ c.friendly_name }}</a>
                 {% endfor %}
