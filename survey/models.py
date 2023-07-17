@@ -32,7 +32,7 @@ class Survey(models.Model):
 
     ratings = models.CharField(
         "Are you satisfied with our offer and service?",
-        blank=True,
+        blank=False,
         choices=ConsumerRatings,
         max_length=54
     )
@@ -44,7 +44,7 @@ class Survey(models.Model):
     )
     reason = MultiSelectField(
         "Why do you buy our products?",
-        blank=True,
+        blank=False,
         max_choices=5,
         choices=ConsumerReasons
     )
