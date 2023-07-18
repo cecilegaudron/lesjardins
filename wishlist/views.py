@@ -47,8 +47,11 @@ def remove_to_wishlist(request, item_id):
     """
     Basic view to remove a product from the wishlist
     """
-    Wishlist.objects.filter(
-        user=request.user,
-        favourite=Product.objects.get(pk=item_id)).delete()
+    profile = get_object_or_404(UserProfile, user=request.user)
+    item = get_object_or_404(Product, pk=item_id)
+
+    profile.favourites.filter(
+        favourite=Product.objects.get(pk=item_id)
+        ).delete()
     messages.success(request, 'The product was removed from your wishlist')
     return HttpResponseRedirect(reverse('product_detail', args=[str(item_id)]))
