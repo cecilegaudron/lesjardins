@@ -2,67 +2,70 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container mb-2">
-        <div class="row">
-            <div class="col">
-                <h2 class="logo-font m-4 text-center">My Wishlist</h2>
-                <div class="text-center">
-                    <a href="{% url 'profile' %}" class="btn btn-success text-uppercase">
-                        My Profile
-                    </a>
-                    <a href="{% url 'order' %}" class="btn btn-success text-uppercase">
-                        My Orders
-                    </a>
-                    <a href="{% url 'account_logout' %}" class="btn btn-success text-uppercase">
-                        Log Out
-                    </a>
-                </div>
-                <hr>
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <h2 class="logo-font m-4 text-center">My Wishlist</h2>
+            <div class="text-center">
+                <a href="{% url 'profile' %}" class="btn btn-green title">
+                    My Profile
+                </a>
+                <a href="{% url 'order' %}" class="btn btn-green title">
+                    My Orders
+                </a>
+                <a href="{% url 'account_logout' %}" class="btn btn-green title">
+                    Log Out
+                </a>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <!-- If items are on the wishlist this block is displayed -->
-                {% if favourites %}
-                    <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            {% for favourite in favourites %}
-                                <tr>
-                                    <td class="p-3 w-25">
-                                        <a href="{% url 'product_detail' favourite.favourite.pk %}">
-                                            <img class="img-fluid rounded" src="{{ favourite.favourite.image.url }}" alt="{{ product.name }}">
-                                        </a>
-                                        </td>
-                                    <td class="py-3">
-                                        <p class="my-0 text-black"><strong>{{ favourite.favourite.name }}</strong></p>
-                                        <p class="my-0 text-black"><strong>{{ favourite.favourite.price }} €</strong></p>
-                                        <p class="my-0 small text-muted">Weight: {{ favourite.favourite.weight }}</p>
-                                        <p class="my-0 small text-muted">Price per kilo: {{ favourite.favourite.price_kilo }} €</p>
-                                    </td>
-                                </tr>
-                                {% endfor %}
-                        </table>
-                    </div>
-                {% else %}
-                    <p class="lead mb-5">Your wishlist is empty</p>
-                    <a href="{% url 'products' %}" class="btn btn-light rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                {% endif %}
-            </div>
+            <hr>
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <!-- If items are on the wishlist this block is displayed -->
+            {% if favourites %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    {% for favourite in favourites %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            <a href="{% url 'product_detail' favourite.favourite.pk %}">
+                                <img class="img-fluid rounded" src="{{ favourite.favourite.image.url }}"
+                                    alt="{{ product.name }}">
+                            </a>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0 text-black"><strong>{{ favourite.favourite.name }}</strong></p>
+                            <p class="my-0 text-black"><strong>{{ favourite.favourite.price }} €</strong></p>
+                            <p class="my-0 small text-muted">Weight: {{ favourite.favourite.weight }}</p>
+                            <p class="my-0 small text-muted">Price per kilo: {{ favourite.favourite.price_kilo }} €</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% else %}
+            <p class="lead mb-5">Your wishlist is empty</p>
+            <div class="text-center">
+                <a href="{% url 'products' %}" class="btn btn-light title">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Keep Shopping</span>
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock %}

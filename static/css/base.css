@@ -65,6 +65,10 @@ footer a:hover {
     text-decoration: underline;
 }
 
+footer li {
+    list-style-type: none;
+}
+
 /* Home page */
 .hp-punchline {
     border: #B6C47F;
@@ -102,11 +106,31 @@ a:hover {
     text-transform: uppercase;
     text-decoration: none;
     border: none;
+    margin: 1%;
+    font-weight: 500;
 }
 
-.btn-success:hover, .btn-green:hover {
+.btn-success:hover, .btn-green:hover,
+.btn-success:active, .btn-green:active {
     color: #FFF;
+    border: none;
+    text-transform: uppercase;
+}
+
+.btn-light {
+    background-color: #6c757d;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    border: none;
+    margin: 1%;
     font-weight: 500;
+}
+
+.btn-light:hover, .btn-light:active {
+    background-color: #d3d3d3;
+    color: #65009C;
+    text-transform: uppercase;
 }
 
 /* from Bulma 

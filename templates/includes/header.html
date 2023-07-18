@@ -22,11 +22,11 @@
     <a href="{% url 'products' %}" class="fixed-menu">SHOP</a>
     <!-- Account icon -->
     {% if request.user.is_authenticated %}
-    <a href="{% url 'profile' %}" class="fixed-menu">
-      <i class="fas fa-user fa-lg shopping_icon"></i>
+    <a href="{% url 'profile' %}">
+      <i class="fas fa-user fa-lg shopping_icon fixed-menu"></i>
       {% else %}
       <a href="{% url 'account_login' %}">
-        <i class="fas fa-user fa-lg shopping_icon"></i>
+        <i class="fas fa-user fa-lg shopping_icon fixed-menu"></i>
         {% endif %}
       </a>
       <!-- Shopping Bag -->
@@ -91,7 +91,7 @@
           </li>
         </ul>
         {% else %}
-        <p class="text-uppercase title fs-1">Account</p>
+        <p class="text-uppercase title fs-1 account">Account</p>
         <ul>
           <li>
             <a href="{% url 'account_signup' %}" class="dropdown-item">

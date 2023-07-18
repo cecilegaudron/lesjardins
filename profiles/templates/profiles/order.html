@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-{% endblock %}
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -21,13 +17,13 @@
             <div class="col">
                 <h2 class="title m-4 text-center">My Orders</h2>
                 <div class="text-center">
-                    <a href="{% url 'profile' %}" class="btn btn-success text-uppercase">
+                    <a href="{% url 'profile' %}" class="btn btn-green title">
                         My Profile
                     </a>
-                    <a href="{% url 'wishlist' %}" class="btn btn-success text-uppercase">
+                    <a href="{% url 'wishlist' %}" class="btn btn-green title">
                         My Wishlist
                     </a>
-                    <a href="{% url 'account_logout' %}" class="btn btn-success text-uppercase">
+                    <a href="{% url 'account_logout' %}" class="btn btn-green title">
                         Log Out
                     </a>
                 </div>

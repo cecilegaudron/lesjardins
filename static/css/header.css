@@ -3,11 +3,11 @@
     background-color: #B6C47F;
 }
 
-li {
+header li {
     list-style-type: none;
 }
 
-a {
+header a {
     text-decoration: none;
     text-transform: uppercase;
     color: #000;
@@ -15,14 +15,11 @@ a {
     font-size: 1.3rem;
 }
 
-a:hover,
-a:active {
+header a:hover,
+header a:active {
     text-decoration: none;
     color: #FFF;
-}
-
-p {
-    color: #FFF;
+    text-transform: uppercase;
 }
 
 .account {
@@ -31,10 +28,16 @@ p {
 
 .dropdown-item {
     padding: 0;
+    color: #000;
+}
+
+.dropdown-item:active, .dropdown-item:hover {
+    background-color: #e6e6e6;
+    color: #000;
 }
 
 .fixed-menu {
-    padding-right: 10%;
+    margin-right: 2rem;
 }
 
 #bars {
