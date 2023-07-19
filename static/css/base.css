@@ -133,6 +133,17 @@ a:hover {
     text-transform: uppercase;
 }
 
+/* Newsletter style for success and error submission */
+#mce-success-response {
+    color: #65009C;
+    font-weight: bold;
+}
+
+#mce-error-response {
+    color: #dc3545;
+    font-weight: bold;
+}
+
 /* from Bulma 
 center and keep font awesome style consistent */
 .icon {
