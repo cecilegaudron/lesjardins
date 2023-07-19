@@ -17,10 +17,11 @@
     <!-- Breadcrumb / Fil Arianne -->
     <div>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="breadcrumb bg-white">
-              <a href="{% url 'products' %}" class="breadcrumb-item">Products</a>
-              <a href="{% url 'products' %}?category={{ product.category.name }}" class="breadcrumb-item">{{ product.category.friendly_name }}</a>
-              <a href="#" class="breadcrumb-item active ariane" aria-current="page">{{ product.name }}</a>
-          </nav>
+            <a href="{% url 'products' %}" class="breadcrumb-item">Products</a>
+            <a href="{% url 'products' %}?category={{ product.category.name }}"
+                class="breadcrumb-item">{{ product.category.friendly_name }}</a>
+            <a href="#" class="breadcrumb-item active ariane" aria-current="page">{{ product.name }}</a>
+        </nav>
     </div>
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -54,12 +55,15 @@
                         <i class="fa-regular fa-heart"></i> Add to wishlist
                     </a>
                 </span>
+                {% if user.is_authenticated %}
+                <!-- Button for removing from the wishlist when user is connected -->
                 <span class="w-20 text-right">
                     <!-- Button for removing from the wishlist-->
                     <a href="{% url 'remove_to_wishlist' product.pk %}" type="button" class="btn btn-green rounded-0">
                         <i class="fa-solid fa-heart"></i> Dislike this product
                     </a>
                 </span>
+                {% endif %}
                 <!-- For quantity and add to shopping bag -->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
@@ -99,8 +103,7 @@
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-green rounded-0 title mt-5"
-                                value="Add to Bag">
+                            <input type="submit" class="btn btn-green rounded-0 title mt-5" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
