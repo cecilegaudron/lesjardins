@@ -110,21 +110,21 @@
                                     </small>
                                     {% endif %}
                                     <div>
-                                        <div class="row">
-                                            <div class="col-6 text-left">
+                                        <div class="text-center">
                                             <!-- Plus sign to add to bag -->
+                                            <span class="text-left w-20">
                                                 <a href="{% url 'product_detail' product.id %}" type="button"
-                                                    class="increment-qty btn btn-green w-100">
-                                                    <i class="fas fa-plus"></i> Add to bag
+                                                    class="increment-qty btn btn-green rounded-0 m-2" title="Add to bag">
+                                                    <i class="fas fa-plus"></i>
                                                 </a>
-                                            </div>
+                                            </span>
                                             <!-- Heart to add to wishlist -->
-                                            <div class="col-6 text-right"></div>
+                                            <span class="text-right w-20">
                                                 <a href="{% url 'add_to_wishlist' product.pk %}" type="button"
-                                                    class="increment-qty btn btn-green w-100">
-                                                    <i class="fa-solid fa-heart"></i> Add to wishlist
+                                                    class="increment-qty btn btn-green rounded-0 m-2" title="Add to wishlist">
+                                                    <i class="fa-solid fa-heart"></i>
                                                 </a>
-                                            </div>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
