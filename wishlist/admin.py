@@ -4,14 +4,14 @@ from .models import Wishlist
 
 
 # https://realpython.com/customize-django-admin-python/
-#https://stackoverflow.com/questions/32443471/django-show-the-count-of-related-objects-in-admin-list-display
+# https://stackoverflow.com/questions/32443471/django-show-the-count-of-related-objects-in-admin-list-display
 @admin.register(Wishlist)
 class WishlistAdmin(admin.ModelAdmin):
     """
     View to display wishlist in Admin Panel
     """
     list_display = ("favourite", "user_favourite", "view_wishproduct")
-    
+
     def view_wishproduct(self, obj):
         return obj.view_wishproduct
 

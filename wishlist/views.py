@@ -4,7 +4,7 @@ from django.contrib import messages
 from .models import Wishlist, Product
 from profiles.models import UserProfile
 
- 
+
 # https://data-flair.training/blogs/python-django-wishlist-app
 @login_required
 def favourite_list(request):
