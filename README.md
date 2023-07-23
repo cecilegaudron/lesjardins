@@ -129,7 +129,7 @@ Facebook would serve both as a business card that users can share with friends, 
 
 ![FACEBOOK MOCKUP](/media/screenshots/facebook-mockup.jpg)  
 
-### GDR  
+### GDPR  
 Concerning the General Data Protection Regulation, I have generated the privacy policy with this [Privacy Policy Generator](https://www.privacypolicygenerator.info).  
 The [link](https://www.privacypolicygenerator.info/live.php?token=5wXhzvlMcnTpFj7LohuincImAdadxGA3) is visible in the footer of the website.  
 
@@ -433,7 +433,6 @@ The steps to create a local clone are :
 2. **Cloud Services, Frameworks...**  
 - [GitHub](https://github.com/), service to store the project  
 - [Gitpod](hhttps://www.gitpod.io/), IDE for building the project  
-- Codeanywhere
 - [Heroku](https://www.heroku.com/), for deploying the project  
 - [Cloudinary](https://cloudinary.com/), images cloud  
 - [ElephantSQL](https://www.elephantsql.com/), PostgreSQL databases service  
