@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-cecilegaudro-lesjardins-qz5xotnyoyp.ws-eu101.gitpod.io',
+    '8000-cecilegaudro-lesjardins-qz5xotnyoyp.ws-eu102.gitpod.io',
     'localhost',
     'les-jardins.herokuapp.com'
     ]
