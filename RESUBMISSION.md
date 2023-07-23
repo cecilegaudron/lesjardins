@@ -54,7 +54,6 @@ If the connected user is the admin user, the page for managing the product is di
 
 [Go back to the Table of content](#table-of-content)  
 
-
 ### Survey  
 I create a new app called "Survey".  
 A survey that users can answer, without needing to be logged into their customer account. The main aim is to gather information that will help us to get to know the customers better. Survey results are available in the Admin Panel.  
@@ -138,28 +137,21 @@ Unfortunately, I don't score well with Lightouse, especially in "performance". I
 ![LIGHTHOUSE DESK](/media/resubmission/lighthouse-desk.png)  
 
 ### Features Left to Implement  
--__XXX__  
-Content
+- Link shopping list with order
+- non modifiable country order to just display FR
 
 ## Manual Testing  
 content
-
-![TESTING SMALL DEVICES MENU](/media/screenshots/testing-sd-menu.png)  
 
 
 ## Unfixed Bugs  
 content 
 
 
-
-![TREE STRUCTURE](/media/screenshots/tree-structure.png)  
-
-[Go back to the Table of content](#table-of-content)  
-
 [Go back to the Table of content](#table-of-content)  
 
 ## Technologies and credits
-- [GitHub](https://github.com/), service to store the project  
+- [Django Multiselectfield](https://pypi.org/project/django-multiselectfield/), to display multiple selections 
 - [Gitpod](hhttps://www.gitpod.io/), IDE for building the project  
 
 ### Credits  
