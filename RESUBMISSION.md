@@ -17,7 +17,7 @@ In order to meet the pass criterias, I had to create new custom models. I decide
 
 ## Changes and Additions  
 
-![TREE STRUCTURE](/media/resubmission/tree-structure.png)  
+![TREE STRUCTURE](/media/resubmission/tree-stucture.png)  
 
 ### Layout  
 I had to modify the layout of the site a little because it was too close to the "My boutique Ado" tutorial. I changed some styles because not all buttons were similar on the different pages of the site.  
@@ -37,10 +37,14 @@ As the layout changed, I create new wireframes, especially to present the new na
 ![MOCKUP DESK](/media/resubmission/desk-mockups2.jpg)  
 
 ### Header and Navbar  
-I wasn't satisfied with the previous nav bar. It had display problems and wasn't always user friendly. I'm not a big fan of dropdown menus, which I find unsuitable for small screens. So I decided to divide the header into three parts. The menu is presented in the same way on different screen sizes.  
+I wasn't satisfied with the previous nav bar. It had display problems and wasn't always user friendly. I'm not a big fan of dropdown menus, which I find unsuitable for small screens. So I decided to divide the header into three parts. The menu is presented in the same way on different screen sizes:  
 - The logo at the top  
 - A first menu in a navbar  
-The menu has a sticky property, which is fixed at the top of the page when the user scrolls. This navbar is made up of four elements. A bars icon that opens a collapse menu, a link to the page listing all products, an icon representing the customer account that opens the profile page, specific to each user, and finally the shopping bag icon with the amount to be paid if products are present in the basket.  
+The menu has a sticky property, which is fixed at the top of the page when the user scrolls. This navbar is made up of four elements:
+  - A bars icon that opens a collapse menu  
+  - A link to the page listing all products  
+  - An icon representing the customer account that opens the profile page, specific to each user  
+  - The shopping bag icon with the amount to be paid if products are present in the basket  
 - A collapse menu  
 It is presenting the different product categories, an account arear and a contact page.  
 In the account area, the different pages accessible to the user, depending on whether or not he's logged in to his account:  
@@ -71,8 +75,8 @@ A number of things weren't quite right and have now been corrected:
 - I don't want the date on which the message was sent to be displayed in the admin panel, as this information is not of interest. I only want to see the date.  
 - I've added a max_length to the text area for a better UX.  
 - Integration of the app in the Admin Panel. The admin can now view all messages sent via the contact form by connecting to the Admin Panel.  
-Fixed bugs such as incorrect url and template name.  
-When the email is successfully sent, the user is taken to a page where this information is notified.  
+- Fixed bugs such as incorrect url and template name.  
+- When the email is successfully sent, the user is taken to a page where this information is notified.  
 
 ![CONTACT](/media/resubmission/admin-contact.png)  
 
