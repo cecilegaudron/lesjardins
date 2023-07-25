@@ -11,17 +11,20 @@ I've made a few changes that provide a better user experience.
 
 
 ## Database  
-In order to meet the passage criteria, I had to create new custom models. I decided to create a survey and a wish list.  
+In order to meet the pass criterias, I had to create new custom models. I decided to create a survey and a wishlist.  
 
 ![DATABASE](/media/resubmission/diagrame-database.jpg)  
 
 ## Changes and Additions  
 
-![TREE STRUCTURE](/media/resubmission/tree-structure.jpg)  
+![TREE STRUCTURE](/media/resubmission/tree-structure.png)  
 
 ### Layout  
 I had to modify the layout of the site a little because it was too close to the "My boutique Ado" tutorial. I changed some styles because not all buttons were similar on the different pages of the site.  
 I encountered problems with some styles because there was a conflict between the base.css and header.css files. I had to change some selectors so that the styles in header.css were not applied instead of base.css.  
+
+### Wireframes  
+As the layout changed, I create new wireframes, especially to present the new navbar.  
 
 ![MOCKUP MOBILE](/media/resubmission/mobile-mockups.jpg)  
 
@@ -35,16 +38,16 @@ I encountered problems with some styles because there was a conflict between the
 
 ### Header and Navbar  
 I wasn't satisfied with the previous nav bar. It had display problems and wasn't always user friendly. I'm not a big fan of dropdown menus, which I find unsuitable for small screens. So I decided to divide the header into three parts. The menu is presented in the same way on different screen sizes.  
-__The logo at the top__  
-__A first menu in a navbar__  
+- The logo at the top  
+- A first menu in a navbar  
 The menu has a sticky property, which is fixed at the top of the page when the user scrolls. This navbar is made up of four elements. A bars icon that opens a collapse menu, a link to the page listing all products, an icon representing the customer account that opens the profile page, specific to each user, and finally the shopping bag icon with the amount to be paid if products are present in the basket.  
-__A collapse menu__  
+- A collapse menu  
 It is presenting the different product categories, an account arear and a contact page.  
-In the account area, the different pages accessible to the user, depending on whether or not he's logged in to his account:
-- Profile  
-- Orders  
-- Wishlist  
-- Log out  
+In the account area, the different pages accessible to the user, depending on whether or not he's logged in to his account:  
+  - Profile  
+  - Orders  
+  - Wishlist  
+  - Log out  
 
 If the connected user is the admin user, the page for managing the product is displaying. If the user is not connected to his account, the menu shows only register and login pages.  
 
@@ -123,37 +126,41 @@ I've changed the layout of some elements on the home page, to add content for th
 __Footer__  
 Finally, I changed some styles for footer because the legibility wasn't always up to scratch and the container was much too big.  
 
-### Development 
-content  
 
+### Features Left to Implement  
+- I'd like to propose that users can directly place orders for products on their wishlist.  
+- I'd like to change the fact that users can only place orders if they live in France. That the country of delivery be restricted.  
 
 [Go back to the Table of content](#table-of-content)  
 
+## Manual Testing  
+### Validator Testing  
+- HTML  
+Many errors are mentioned in the [W3C validator](https://validator.w3.org/nu/) but they concerned almost the Django templates.
+
+- CSS  
+No errors were found when passing through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/)  
+
+- JavaScript  
+I didn't write my own Javascript code, so I don't need to check it.  
+
+- Python  
+My IDE has a built-in python code checker, so I do the checks as I went along. Some lines are too long, but I chose not to cut them in order to keep a better visibility.  
+
+
 ### Lighthouse  
-Unfortunately, I don't score well with Lightouse, especially in "performance". I was unable to improve this score in the time available.  
+Unfortunately, I don't score well with Lightouse, especially in "performance". I don't know how to improve this score.  
 
 ![LIGHTHOUSE MOBILE](/media/resubmission/lighthouse-mobile.png)  
 
 ![LIGHTHOUSE DESK](/media/resubmission/lighthouse-desk.png)  
-
-### Features Left to Implement  
-- Link shopping list with order
-- non modifiable country order to just display FR
-
-## Manual Testing  
-content
-
-
-## Unfixed Bugs  
-content 
 
 
 [Go back to the Table of content](#table-of-content)  
 
 ## Technologies and credits
 - [Django Multiselectfield](https://pypi.org/project/django-multiselectfield/), to display multiple selections 
-- [Gitpod](hhttps://www.gitpod.io/), IDE for building the project  
 
 ### Credits  
-- [GitHub](https://github.com/), service to store the project  
-- [Gitpod](hhttps://www.gitpod.io/), IDE for building the project  
+- I use these ressources to build the function for the wishlist: [Data-flair.training](https://data-flair.training/blogs/python-django-wishlist-app), [StackOverFlow](https://stackoverflow.com/questions/63444550/how-to-delete-product-from-wishlist-in-django), [StackOverFlow](https://stackoverflow.com/questions/56580696/how-to-implement-add-to-wishlist-for-a-product-in-django)
+- I use these ressources to filter the admin panel for the wishlist app: [Realpython.com](https://realpython.com/customize-django-admin-python/) and [Pypi.org](https://pypi.org/project/django-multiselectfield/)
