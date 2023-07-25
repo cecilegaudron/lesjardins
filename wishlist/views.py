@@ -5,7 +5,6 @@ from .models import Wishlist, Product
 from profiles.models import UserProfile
 
 
-# https://data-flair.training/blogs/python-django-wishlist-app
 @login_required
 def favourite_list(request):
     """
@@ -24,7 +23,6 @@ def favourite_list(request):
     return render(request, template, context)
 
 
-# https://stackoverflow.com/questions/56580696/how-to-implement-add-to-wishlist-for-a-product-in-django
 @login_required
 def add_to_wishlist(request, item_id):
     """
@@ -41,7 +39,6 @@ def add_to_wishlist(request, item_id):
     return HttpResponseRedirect(reverse('product_detail', args=[str(item_id)]))
 
 
-# https://stackoverflow.com/questions/63444550/how-to-delete-product-from-wishlist-in-django
 @login_required
 def remove_to_wishlist(request, item_id):
     """

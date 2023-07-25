@@ -12,7 +12,6 @@ class Survey(models.Model):
         ("46-59", "46-59 years"),
         ("60", "60 years and +"),
     ]
-
     ConsumerRatings = [
         ("extraordinary", "Extraordinary"),
         ("perfect", "Perfect"),
@@ -20,8 +19,6 @@ class Survey(models.Model):
         ("can-be-better", "Can be better"),
         ("not-recommended", "Not recommended"),
     ]
-
-    # https://pypi.org/project/django-multiselectfield/
     ConsumerReasons = (
         ('reason_organic', 'They are organic'),
         ('reason_healthy', 'They are good for your health'),
@@ -29,7 +26,6 @@ class Survey(models.Model):
         ('reason_taste', 'They taste good'),
         ('reason_close', 'They are close to home')
     )
-
     ratings = models.CharField(
         "Are you satisfied with our offer and service?",
         blank=False,

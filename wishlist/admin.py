@@ -3,8 +3,6 @@ from django.db.models import Count
 from .models import Wishlist
 
 
-# https://realpython.com/customize-django-admin-python/
-# https://stackoverflow.com/questions/32443471/django-show-the-count-of-related-objects-in-admin-list-display
 @admin.register(Wishlist)
 class WishlistAdmin(admin.ModelAdmin):
     """
