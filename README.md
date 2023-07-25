@@ -9,6 +9,7 @@ Unfortunately, I've been caught in time that I haven't been successfull to corre
 -  [Visual Design](#visual-design)  
 -  [Marketing](#marketing)  
 -  [Development](#development)  
+-  [Resubmission](#resubmission)  
 -  [Testing](#testing)  
 -  [Deployment](#deployment)  
 -  [Technologies](#technologies)  
@@ -314,6 +315,9 @@ A blog allows you to add new content to your website on a regular basis. Sharing
 Les Jardins could offer users the chance to subscribe to weekly or monthly baskets. This provides a fixed income stream and builds customer loyalty. Customers can then have a basket of fruit and/or vegetables delivered to their home on a regular basis, at their own pace.  
 
 [Go back to the Table of content](#table-of-content)  
+
+## Resubmission    
+The content about testing is stocked in this document [resubmission.md](/RESUBMISSION.md)  
 
 ## Testing  
 The content about testing is stocked in this document [testing.md](/TESTING.md)  
